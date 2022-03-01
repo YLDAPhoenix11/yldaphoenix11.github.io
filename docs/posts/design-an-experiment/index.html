@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Design an Experiment | Nothing</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Course note of A/B testing on Udacity: Lesson 4
+ #Design an Experiment
+Choose &ldquo;subject&rdquo; Unit of diversion What an individual subject is in the experiment.
+Unit of diversion examples:   commonly used:
+  user id
+  stable, unchanging
+  personally identifiable
+    Anonymous id (cookie)
+ changes when switching browser or device users can clear cookies    Event
+ no consistent experience use only for non-user-visible changes      less common:">
+    <meta name="generator" content="Hugo 0.92.2" />
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="Design an Experiment" />
+<meta property="og:description" content="Course note of A/B testing on Udacity: Lesson 4
+ #Design an Experiment
+Choose &ldquo;subject&rdquo; Unit of diversion What an individual subject is in the experiment.
+Unit of diversion examples:   commonly used:
+  user id
+  stable, unchanging
+  personally identifiable
+    Anonymous id (cookie)
+ changes when switching browser or device users can clear cookies    Event
+ no consistent experience use only for non-user-visible changes      less common:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/design-an-experiment/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-03-22T15:18:00+00:00" />
+<meta property="article:modified_time" content="2020-03-22T15:18:00+00:00" />
+
+<meta itemprop="name" content="Design an Experiment">
+<meta itemprop="description" content="Course note of A/B testing on Udacity: Lesson 4
+ #Design an Experiment
+Choose &ldquo;subject&rdquo; Unit of diversion What an individual subject is in the experiment.
+Unit of diversion examples:   commonly used:
+  user id
+  stable, unchanging
+  personally identifiable
+    Anonymous id (cookie)
+ changes when switching browser or device users can clear cookies    Event
+ no consistent experience use only for non-user-visible changes      less common:"><meta itemprop="datePublished" content="2020-03-22T15:18:00+00:00" />
+<meta itemprop="dateModified" content="2020-03-22T15:18:00+00:00" />
+<meta itemprop="wordCount" content="855">
+<meta itemprop="keywords" content="course notes,data analytics,A/B testing," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Design an Experiment"/>
+<meta name="twitter:description" content="Course note of A/B testing on Udacity: Lesson 4
+ #Design an Experiment
+Choose &ldquo;subject&rdquo; Unit of diversion What an individual subject is in the experiment.
+Unit of diversion examples:   commonly used:
+  user id
+  stable, unchanging
+  personally identifiable
+    Anonymous id (cookie)
+ changes when switching browser or device users can clear cookies    Event
+ no consistent experience use only for non-user-visible changes      less common:"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Nothing
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Design an Experiment</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2020-03-22T15:18:00Z">March 22, 2020</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p><em>Course note of <a href="https://www.udacity.com/course/ab-testing--ud257">A/B testing on Udacity</a>: Lesson 4</em></p>
+<!-- raw HTML omitted -->
+<hr>
+<p>#Design an Experiment</p>
+<h2 id="choose-subject">Choose &ldquo;subject&rdquo;</h2>
+<h3 id="unit-of-diversion">Unit of diversion</h3>
+<p><strong>What an individual subject is in the experiment.</strong></p>
+<h4 id="unit-of-diversion-examples">Unit of diversion examples:</h4>
+<ul>
+<li>
+<p><strong>commonly used:</strong></p>
+<ul>
+<li>
+<p>user id</p>
+<ul>
+<li>
+<p>stable, unchanging</p>
+</li>
+<li>
+<p>personally identifiable</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Anonymous id (cookie)</p>
+<ul>
+<li>changes when switching browser or device</li>
+<li>users can clear cookies</li>
+</ul>
+</li>
+<li>
+<p>Event</p>
+<ul>
+<li>no consistent experience</li>
+<li>use only for non-user-visible changes</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>less common:</strong></p>
+<ul>
+<li>Device id
+<ul>
+<li>only available for <strong>mobile</strong> (so here the device id is just for mobile)</li>
+<li>tied to specific device</li>
+<li>unchangeable by user</li>
+</ul>
+</li>
+<li>IP address
+<ul>
+<li>changes when location changes</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>**Quiz: **</p>
+<p>When would the user be switched to another group in experiement? (When the unit of diversion will change? )</p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbh190hlrej31iw0u0npd.jpg" alt=""></p>
+<p>User-id: only valid when signing in</p>
+<p>Cookie: do not change if users do not clear cookies through these events, otherwise it would change (so some are &ldquo;?&quot;)</p>
+<p>Event: change among every events</p>
+<p>Device id: only valid for mobile</p>
+<p>IP address: (hard to tell whether it changes in &ldquo;?&rdquo; )</p>
+</li>
+</ul>
+<h5 id="1-consistency-of-diversions">1. Consistency of Diversions</h5>
+<ul>
+<li>
+<p>user consistency</p>
+</li>
+<li>
+<p>Quiz:</p>
+<p>Choose event when event is enough; choose cookie when event is not good and cookie is enough; choose user-id when event and cookie are not enough for experiment</p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbh2h85pm6j31h30u0u0x.jpg" alt=""></p>
+<p>Events: for the changes that users will not notice</p>
+<p>Cookie: it iwll be very strange if the button size and color change when user reload the pages.</p>
+<p>User-id: when cross device consistency is important</p>
+</li>
+</ul>
+<h5 id="2-ethical-considerations-for-diversion">2. Ethical Considerations for Diversion</h5>
+<ol>
+<li>User-id is identified, so using user-id must be careful.</li>
+<li>Informed consent</li>
+</ol>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbh2ufice0j31lt0u01ky.jpg" alt=""></p>
+<p>1st: when user log in, they have already submit their email and may have already approved that their data can be collected.</p>
+<p>2nd: if emails are collected by cookies, then it will need inform user.</p>
+<h5 id="3-variability">3. variability</h5>
+<p>empirically/analytically computed varaibility</p>
+<p>Sometimes empirically will be higher than analytically because unit of analysis is different from unit of diversion (unit of analysis: the denominator of metrics. For example, pageviews in CTR (clicks/pageviews)) is unit of analysis. If unit of diversion is pageviews, empirically $\approx$ analytically. If unit of diversion is cookie/user-id, varaibility will be higher, so it is better to use empirically given unit of diversion.  - why: when compute analytically, make assumption on distribution of data and indenpendence</p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbhvu15fjaj31hp0u0npd.jpg" alt="">In the example above, metric is coverage and unit of analysis is query. If use cookie as unit of diversion, the standard error will be higher than that with query as unit of diversion.</p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbhvs6dzpsj31jt0u04qq.jpg" alt=""></p>
+<p>1st: unit of analysis: pageviews; unit of diversion: cookie; unit of analysis (event) is &ldquo;larger&rdquo; than unit of diversion(cookie). All pageviews of one cookie will belong to one group.</p>
+<p>2nd: unit of analysis: cookie; unit of diversion: pageview; unit of diversion (pageview) is too fine-grained. That is, one cookie may have multiple pageviews. So, 2 pageviews of one cookie may belong to different groups.</p>
+<p>3rd: two units are consistent.</p>
+<h2 id="choose-population">Choose &ldquo;population&rdquo;</h2>
+<h3 id="inter-user-experiment-vs-intra-user-experiment">Inter-User experiment vs. Intra-User experiment</h3>
+<p>Inter-User experiment: A/B testing</p>
+<p>Intra-User experiment: show different things to same user in different time</p>
+<h3 id="target-population">Target Population</h3>
+<p>restrict the population by geo, language, browser; Also good for run multiple testing (not overlap) in company;</p>
+<p>In the example below, practical significance d_min is not given. So, we just use statistical significance as 0.</p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbi6ft0vhyj31kr0u0x6p.jpg" alt=""></p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbi6hnsfmaj31e30u01ky.jpg" alt=""></p>
+<p>For global, must add all data from New Zealand and data from Other. d_hat-m&lt;0, so it is not significant.</p>
+<p>The difference between these two results is due to the difference of d_hat.</p>
+<h3 id="population-vs-cohort">Population vs. Cohort</h3>
+<p>For population, people may exit the experiment, or maybe their IP address can change in experiment. For cohort based on time, it is just people who enter the experiment as the same time. It is harder to analyze since it lose data. Typically, only use cohort when we need user to be stable and established.</p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbi6x18obuj31mm0qe4oc.jpg" alt=""></p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbi6xgkrq0j31ht0u0hdt.jpg" alt=""></p>
+<h2 id="size">Size</h2>
+<p><strong>In lesson 1, size based on practical significance, statistical significance and sensitivity.</strong></p>
+<p>Choice of metric/unit of diversion/population will influence variability, and variability will change size.</p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbj1ibkjyuj31ed0u0hdt.jpg" alt=""></p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbj1igwbhtj31hi0u04qp.jpg" alt=""></p>
+<ul>
+<li>
+<p>Quiz:</p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbj203v6s1j31kf0u04qq.jpg" alt="">1st: Change the unit of diversion to the unit of analysis will decrese the variability (also, SE).</p>
+<p>2nd: Other traffic will dilute the results and increase the variability.</p>
+<p>3rd: often it doesn&rsquo;t make significant difference. But if there is a difference, varaibility would probably go down because unit of analysis and unit od diversion are same.</p>
+</li>
+<li>
+<p>Targeting the size to specific traffic will cause some problems:</p>
+<ol>
+<li>We do not know what results will this traffic lead to. It is hard to predict.</li>
+<li>Hard to detect impact.</li>
+</ol>
+<p>Therefore, run a pilot, turn on the experiemnt for a little to see who&rsquo;s affected, or just use the first day/week to get a better guess.</p>
+</li>
+</ul>
+<h2 id="duration">Duration</h2>
+<ol>
+<li>what duration?</li>
+<li>when to run the experiment?</li>
+<li>what fraction of traffic are going to use? - given size, less proportion lead to a longer duration.</li>
+</ol>
+<p>Why not run on all traffic: safety. press. run on multiple days for weekdays and weekends/ holidays and normal days. run multiple experiments and tasks.</p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbjbbzyzphj31gd0u07wh.jpg" alt=""></p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbjbc8dh83j31j40u0u0x.jpg" alt=""></p>
+<p>Risky: may cause big problem if the result is not good enough.</p>
+<p>**Learning effect: **</p>
+<p>Some users do not like new changes, while other users are excited to see new changes.</p>
+<p>Measure user learning:</p>
+<p>If there is learning effect, there won&rsquo;t be a big change right from beginning but increasing over time.</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/course-notes" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">course notes</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/data-analytics" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">data analytics</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/a/b-testing" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">A/B testing</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/choosing-and-characterizing-metrics/">Choosing and Characterizing metrics</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/policy-and-ethics-for-experiments/">Policy and Ethics for Experiments</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/overview-of-ab-testing/">Overview of A/B Testing</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/sentiment-analysis/">Sentiment Analysis</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/recsys_intro/">RecSys Intro</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://example.org/" >
+    &copy;  Nothing 2022 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div></div>
+  </div>
+</footer>
+
+  </body>
+</html>

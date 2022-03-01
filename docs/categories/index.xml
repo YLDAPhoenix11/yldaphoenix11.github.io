@@ -5,6 +5,70 @@
     <link>http://example.org/categories/</link>
     <description>Recent content in Categories on Nothing</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://example.org/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Fri, 25 Feb 2022 23:59:08 +0000</lastBuildDate><atom:link href="http://example.org/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>essays</title>
+      <link>http://example.org/categories/essays/</link>
+      <pubDate>Fri, 25 Feb 2022 23:59:08 +0000</pubDate>
+      
+      <guid>http://example.org/categories/essays/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>course notes</title>
+      <link>http://example.org/categories/course-notes/</link>
+      <pubDate>Sun, 22 Mar 2020 20:30:00 +0000</pubDate>
+      
+      <guid>http://example.org/categories/course-notes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>recommender systems</title>
+      <link>http://example.org/categories/recommender-systems/</link>
+      <pubDate>Sun, 22 Mar 2020 20:30:00 +0000</pubDate>
+      
+      <guid>http://example.org/categories/recommender-systems/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>data analytics</title>
+      <link>http://example.org/categories/data-analytics/</link>
+      <pubDate>Sun, 22 Mar 2020 15:23:00 +0000</pubDate>
+      
+      <guid>http://example.org/categories/data-analytics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>projects</title>
+      <link>http://example.org/categories/projects/</link>
+      <pubDate>Wed, 16 Oct 2019 15:54:34 +0000</pubDate>
+      
+      <guid>http://example.org/categories/projects/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cracking the PM interview</title>
+      <link>http://example.org/categories/cracking-the-pm-interview/</link>
+      <pubDate>Wed, 17 Apr 2019 18:14:56 +0000</pubDate>
+      
+      <guid>http://example.org/categories/cracking-the-pm-interview/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>reading notes</title>
+      <link>http://example.org/categories/reading-notes/</link>
+      <pubDate>Wed, 17 Apr 2019 18:14:56 +0000</pubDate>
+      
+      <guid>http://example.org/categories/reading-notes/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

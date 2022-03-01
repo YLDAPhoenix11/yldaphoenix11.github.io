@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>deep learning on Nothing</title>
+    <link>http://example.org/tags/deep-learning/</link>
+    <description>Recent content in deep learning on Nothing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 16 Oct 2019 15:54:34 +0000</lastBuildDate><atom:link href="http://example.org/tags/deep-learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Applied Deep Learning Projects</title>
+      <link>http://example.org/posts/applied-deep-learning-projects/</link>
+      <pubDate>Wed, 16 Oct 2019 15:54:34 +0000</pubDate>
+      
+      <guid>http://example.org/posts/applied-deep-learning-projects/</guid>
+      <description>Applied Deep Learning http://YLDAPhoenix11.github.io/Applied-Deep-Learning/</description>
+    </item>
+    
+  </channel>
+</rss>

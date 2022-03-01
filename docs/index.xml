@@ -6,14 +6,241 @@
     <description>Recent content on Nothing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Mar 2022 19:57:05 +0800</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 25 Feb 2022 23:59:08 +0000</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>My First Post</title>
-      <link>http://example.org/posts/my-first-post/</link>
-      <pubDate>Tue, 01 Mar 2022 19:57:05 +0800</pubDate>
+      <title>我，深漂两年</title>
+      <link>http://example.org/posts/%E6%88%91%E6%B7%B1%E6%BC%82%E4%B8%A4%E5%B9%B4/</link>
+      <pubDate>Fri, 25 Feb 2022 23:59:08 +0000</pubDate>
       
-      <guid>http://example.org/posts/my-first-post/</guid>
-      <description></description>
+      <guid>http://example.org/posts/%E6%88%91%E6%B7%B1%E6%BC%82%E4%B8%A4%E5%B9%B4/</guid>
+      <description>漂了两年的一些碎碎念
+echo &amp;lsquo;export PATH=&amp;quot;/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.1.0/bin&amp;quot;&amp;rsquo; &amp;raquo; ~/.zshrc
+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
+ 之前看一个博客的时候，博主说，如果一个博客长时间断更了，说不定博主就是去大厂996了；没错，就是我。
+结束假期从家里回到深圳的时候，我从飞机上下来，首先就想到了工作；啊，这就是深圳打工人。本文大概就是记录一下我作为深圳打工人的一些心路历程。
+从数据仓库开始 我被招进来的时候title是数据分析，没错，就是包罗万象、啥都能做、投递录用比又是最高的数据分析。进来之后，做的第一个工作就是开发指标，顺便写wiki。那大概是我刚进来的前三个月，我每天的工作都是和BI表打交道，晚上写相关的wiki文档，然后写日报，然后下班。我不知道这是不是我们公司or部门的特色，就是新人进来之后第一件事就是做BI表。有一说一，我当时做的非常顺手非常习惯，我导师甚至觉得我蛮适合搞数仓开发的，但是我本人，真的觉得它很无聊。因为这个工作还是蛮执行的，没有太多个人发挥的空间；当时我逐渐摸索到更复杂的指标体系之类的东西，但是并没有深入的理解指标体系究竟应该为什么服务、应该如何建设，当时的我觉得，应该就是为汇报服务吧&amp;hellip;&amp;hellip;
+说起来，我们部门数据团队是一个小团队，出汇报数据真的是我们的主要任务之一。差不多就是我刚来的时候，数据团队才从另一个组独立出来。后来大概也了解了一下整个团队以及部门的历史，了解到老板最初对数据团队的希望就是给产品出汇报数据。哎，说实话，我得知的时候还是有一丝伤心的，即使当时我已经适应这里的工作了。
+搞点事情 但是我导师是个不满足于汇报的人，她，用我组长的话说，叫喜欢搞事情。我导师在这个岗位上搞过模型（带很多数据公式的那种），也写过n多复杂sql（一层层套的那种），在我快来的前一年，她开始着重搞数仓和指标。为什么会有先做上层再做底层这么奇怪的顺序呢？我分析了一下，主要原因是我们那个时候要支持到一个新业务了（这个很重要）。新业务嘛，总是要先搞底层建设，顺便把之前的业务的底层业务翻新修一修。
+但是我说了呀，我导师是个爱搞事情的人。于是，在我度过了前三个月的试用期后，她开始带我一起开始搞事情了。那半年我跟着她搞了算法，搞了商业分析报告，还写了后台。当时搞的这个算法，成为了我在这个部门立足和刷影响力最重要的东西之一；当时搞的这个后台，开启了我在这个部门的写后台之路；当时搞的商业分析报告，因为没有正确领会到老板的意思，最终没写到老板想要的水平，只是在内网发了一下，可能是最遗憾的东西。不过，就算我在搞这些事情，BI报表数仓什么的，依然没停。
+说起后台，怎么会有人让数据分析写后台啊（即使是python写的web后台）！我真的不喜欢写后台。我第一次写后台的时候，磕磕绊绊抄抄捡捡花了1个月时间写第一版，然后发现架构不对，于是（以我当时的水平）好好设计了一番，推倒重写了。然后，前端资源没了&amp;hellip;&amp;hellip;再然后，这个项目搁置了&amp;hellip;&amp;hellip;没错，我第一次写的后台，直到现在都还没上线&amp;hellip;&amp;hellip;
+晚了一步 就这样，我工作的第一年就这样糊里糊涂的过去了。
+从我的文字里大概也可以看出，我想换个地方。我以前想进这个厂，是因为听说这个厂的数据分析比较偏技术。如今我知道了，（至少在我部门，）这技术不是偏算法，而是偏工程。
+这不是我想要的。我工作还没到一年的时候，我导师就曾经问我应该不会立刻run吧；我说刚工作的一年内应该不会；她当时的表情可以用震惊形容。
+所以说我心里是真的有换个岗位的想法，我同学甚至还推荐了他们组，我还跟他们组组长聊了聊。但是，我是一个怂人（重点，要考的）。于是，我晚了一步：在我还依旧在内心大战的时候，我被我组长通知：我导师先溜了。
+我内心那一个懵逼呀。为啥？因为我们组当时搞数据分析的就只有我们俩啊！我导师走了，那不就是，我顶上吗？
+我组长当时也很摇摆，他想再招一个跟我导师差不多职级的。不过我导师呢（说起来她真是个好人&amp;amp;我的贵人），觉得我有潜力，可以独当一面。我自己想了想，好没问题，那我就来试试吧。后来我组长还确实招到了一个跟我导师差不多职级的，结果没过老板面，最后也就没有再招，只来了一个校招新人，我就变成了数据分析的主要负责人之一。
+神奇的半年 我导师走之前，给我留下的东西，除了工作上的安排，还有对我的告诫：她觉得我太“佛”了。我组长也觉得，我不够那么“搞事情”。
+我已经忘了我当时是什么心态。如今，再回望那半年，我已经不知道我是怎么做出来的那些事情。可能有不会被打二星的放松，有做自己比较喜欢的事情的热情（当时我做的事情比较偏业务、偏用户，也是“正经的”数据科学的工作之一），也有遇到老板重视的好项目、能独当一面的契机和运气。
+那半年结束后，我拿了一个五星。但是，在接下来的半年，我却无法复刻那半年了。（写完这篇我决定去翻看一下我的工作日志努力回忆）
+这个大腿不是很香 我在上面提到了一个老板重视的好项目，我之前在那里面也干了不少事；不过遗憾的是，这个项目的发展逐渐停滞，迟迟没有达到老板的预期，无论是产品还是开发，对这个项目的投入也越来越少了。
+接下来，我做了一个错误决定：我没有再对这个项目投入太多精力，转身抱了另一个项目的大腿。这个项目是新项目，但是是部门的重点项目之一，专门从外面请了一个高级产品坐镇。我想着，这是一个香饽饽吧；于是就屁颠屁颠的去服务于这个项目了。
+直到三个月后，我才发现自己的错误：
+ 我组长认为服务于原项目才是我们的本职工作，对于这个新项目的服务，该支持但不是重点；这是最糟糕的一点，我没有和组长达成共识； 这个新项目是做平台，to b，并且差不多是乙方的乙方；这意味着我完全拿不到用户数据，因为我们的甲方愿意自己分析；意味着我作为平台的数据，没有偏业务、偏用户的需求；意味着作为一个新项目，他要做的首先是数据的底层规划、数仓建设。没错，又是数仓建设。事实上，由于部门的原因，我服务过的平台和新项目有好几个，每次到我这里，需求只是数仓和报表建设而已。只能说这次，真是被“核心项目”蒙蔽了双眼。 还有一点，是这个项目对于数据真的不怎么看重&amp;hellip;&amp;hellip;不知道是不是（本公司/部门？）平台的通病，大家都会觉得开发出来最重要，业务什么时候要数据再说吧，大不了让他们从开发库表拉&amp;hellip;&amp;hellip;事到如今，这个项目已经运行了快一年了，前几天还在为平台的数据建设吵架呢。  纠结，犹豫 怎么说，大腿抱着抱着，我又干回了数据开发。而且那半年，我们数据产品经理觉得之前（就是我搞老板重视的好项目的时候）对数据平台的支持不够，要投入更多做数据平台开发。啊，对，没错，我还要写后台。
+说起来我实在是不懂我们团队的构造，既要深入业务，又要做自己的数据平台。我到底是哪一边的，是裁判员还是运动员啊。而且当时，我们还重新划分了数据title，分成了数据科学和数据工程。我选了数据科学，无比开心，希望自己可以和后台say goodbye。结果发现， 除了title变了，啥都没变。
+又写后台又搞数据开发，我想溜的心又蠢蠢欲动起来。但是前面说了嘛，我怂，怂到连之前给我介绍他们组的同学都换组了，他们组都解散了，我还没溜，我还在苟。
+我还在天人交战，是走呢还会不走呢、现在走是不是不好呢，的时候，我组长又带来一个消息。就我之前跟着我导师搞的算法，有别的部门要围绕着这个算法做公司级项目，问我要不要加入。那我当然加入啦。然后他又问我要不要做类似项目主要贡献人之类的角色，我思考了一下，答应了。
+我发现我就是那种，如果有人要搞事情，问我要不要搞，虽然很麻烦也不一定有好结果，但是我还是会答应；这次也好，之前我导师走时让我独当一面也好。但是如果让我主动去搞事情，我就会觉得麻烦，就会怂，就会觉得不一定有好结果，就会不主动。
+总之，借着这个项目，我又继续苟了。不过，回头看看，说不定当时是run的最好时机（之一？）。因为自己的怂错过了，如今的就业市场，没当时那么好跳了。
+chaos 不知不觉，苟到工作快两年了，我还没挪窝。新的一年又开始了，新的battle也开始了，新的run也同步开始了。
+首先，我之前一直服务的业务的核心产品，跑了。
+以此为契机，整个业务的方向都在调整，连带着数据团队的OKR，也转个不停。
+我组长希望数据组趁机去做这个业务的增长运营，数据产品经理想做数据平台，我们组另外的同事呢，想报另一个业务的大腿，我嘛，还是想靠近用户，和后台say goodbye。
+但是现在谁都不知道究竟会发展成什么样子，因为老板还没有完全拍板我们要做什么。谁知道未来会变得怎样，早知道就早点跳；谁知道我会不会继续苟下去，还是主动出击；谁知道这场漂泊，什么时候才是尽头。</description>
+    </item>
+    
+    <item>
+      <title>RecSys Reading</title>
+      <link>http://example.org/posts/recsys_reading/</link>
+      <pubDate>Sun, 22 Mar 2020 20:30:00 +0000</pubDate>
+      
+      <guid>http://example.org/posts/recsys_reading/</guid>
+      <description>Course note: Reading of Recommender systems
+ 在Personalization这门课上Prof给的阅读内容：Papers Variational Autoencoders for Collaborative Filtering
+Deep content-based music recommendation
+Training and Testing of Recommender Systems on Data Missing Not at Random
+Item-Based Collaborative Filtering Recommendation Algorithms
+BPR: Bayesian Personalized Ranking from Implicit Feedback
+Graph Convolutional Neural Networks for Web-Scale Recommender Systems
+Does Wikipedia Information Help Netflix Predictions?
+Field-aware Factorization Machines for CTR Prediction
+Deep Learning based Recommender System: A Survey and New Perspectives</description>
+    </item>
+    
+    <item>
+      <title>Final Project</title>
+      <link>http://example.org/posts/final-project/</link>
+      <pubDate>Sun, 22 Mar 2020 15:23:00 +0000</pubDate>
+      
+      <guid>http://example.org/posts/final-project/</guid>
+      <description>Course note of A/B testing on Udacity: Lesson 6
+ Final Project 0. Instruction Instruction: https://docs.google.com/document/u/1/d/1aCquhIqsUApgsxQ8-SQBAigFDcfWVVohLEXcV6jWbdI/pub?embedded=True
+Experiment Overview: Free Trial Screener At the time of this experiment, Udacity courses currently have two options on the course overview page: &amp;ldquo;start free trial&amp;rdquo;, and &amp;ldquo;access course materials&amp;rdquo;. If the student clicks &amp;ldquo;start free trial&amp;rdquo;, they will be asked to enter their credit card information, and then they will be enrolled in a free trial for the paid version of the course.</description>
+    </item>
+    
+    <item>
+      <title>Analyzing Results</title>
+      <link>http://example.org/posts/analyzing-results/</link>
+      <pubDate>Sun, 22 Mar 2020 15:20:00 +0000</pubDate>
+      
+      <guid>http://example.org/posts/analyzing-results/</guid>
+      <description>Course note of A/B testing on Udacity: Lesson 5
+ #Analyzing Results
+Sanity checks check invariant metrics
+ population sizing metrics based on unit of diversion: experiment population and control population is comparable other metrics that should not change in experiments  Choosing Invariants   Quiz: (choose the invariant metrics, that is, choose the metrics that would be the same in experiment and control group)
+ 1st: user-id is the unit of diversion, so #signed in users are random in experiment group and control groups.</description>
+    </item>
+    
+    <item>
+      <title>Design an Experiment</title>
+      <link>http://example.org/posts/design-an-experiment/</link>
+      <pubDate>Sun, 22 Mar 2020 15:18:00 +0000</pubDate>
+      
+      <guid>http://example.org/posts/design-an-experiment/</guid>
+      <description>Course note of A/B testing on Udacity: Lesson 4
+ #Design an Experiment
+Choose &amp;ldquo;subject&amp;rdquo; Unit of diversion What an individual subject is in the experiment.
+Unit of diversion examples:   commonly used:
+  user id
+  stable, unchanging
+  personally identifiable
+    Anonymous id (cookie)
+ changes when switching browser or device users can clear cookies    Event
+ no consistent experience use only for non-user-visible changes      less common:</description>
+    </item>
+    
+    <item>
+      <title>Choosing and Characterizing metrics</title>
+      <link>http://example.org/posts/choosing-and-characterizing-metrics/</link>
+      <pubDate>Sun, 22 Mar 2020 14:48:02 +0000</pubDate>
+      
+      <guid>http://example.org/posts/choosing-and-characterizing-metrics/</guid>
+      <description>Course note of A/B testing on Udacity: Lesson 3
+ Choosing and Characterizing metrics   Two types of metrics and their use cases:
+ invariant checking/sanity checking metrics: metrics should not change across the experiment and the control. For example, the number of users in two groups in experiment and do they have the same distribution, like country, age, etc. For sanity checking may use multiple metrics evaludation metrics: high-level business metrics+detail metrics.</description>
+    </item>
+    
+    <item>
+      <title>Policy and Ethics for Experiments</title>
+      <link>http://example.org/posts/policy-and-ethics-for-experiments/</link>
+      <pubDate>Sun, 22 Mar 2020 12:08:00 +0000</pubDate>
+      
+      <guid>http://example.org/posts/policy-and-ethics-for-experiments/</guid>
+      <description>Course note of A/B testing on Udacity: Lesson 2
+ Policy and Ethics for Experiments Main principles 1. Risk  what risk is the participant undertaking? The main threshold is whether the risk exceeds that of “minimal risk”. Minimal risk is defined as the probability and magnitude of harm that a participant would encounter in normal daily life. The harm considered encompasses physical, psychological and emotional, social, and economic concerns. If the risk exceeds minimal risk, then informed consent is required.</description>
+    </item>
+    
+    <item>
+      <title>Overview of A/B Testing</title>
+      <link>http://example.org/posts/overview-of-ab-testing/</link>
+      <pubDate>Thu, 19 Mar 2020 21:29:58 +0000</pubDate>
+      
+      <guid>http://example.org/posts/overview-of-ab-testing/</guid>
+      <description>Course note of A/B testing on Udacity: Lesson 1
+ Overview of A/B Testing Overview and Introduction What is useful for A/B testing and what is not?
+  Useful when there is clear control and experiment, and good metrics to evaluate.
+  is not useful for testing new experience - change version/ a novelty effect; also not useful if missing something
+  Quiz1:
+  why A/B testing is not useful for &amp;ldquo;Online shopping company&amp;rdquo;?</description>
+    </item>
+    
+    <item>
+      <title>正月十七</title>
+      <link>http://example.org/posts/%E6%AD%A3%E6%9C%88%E5%8D%81%E4%B8%83/</link>
+      <pubDate>Mon, 10 Feb 2020 17:42:29 +0000</pubDate>
+      
+      <guid>http://example.org/posts/%E6%AD%A3%E6%9C%88%E5%8D%81%E4%B8%83/</guid>
+      <description>&amp;hellip;&amp;hellip;
+正月十七 距离新冠肺炎疫情开始已经过去一段时间了，写下这篇的时间是2020年2月10日，正月十七。
+我大概是在2020年1月18日，在朋友圈看到医学生同学发的相关信息。他连续发了几天，让我逐渐意识到了事情的严重性。那个时候的我，大概知道医护圈觉得这是个比较严重的事情，但是并不知道到底有多严重，会给我的生活带来怎样的变化。
+2020年1月21日，我陪母亲去医院检查身体，那个时候的我已经有了防范意识，戴上了口罩。但是，在医院就诊的人们中，戴口罩的并不多，不到一半。医院里的医生护士和清洁工倒是都戴上了口罩。很多人都还没有警觉起来，年夜饭还没有取消，大家还在期待着一个热闹的春节。那一天，是腊月二十七。
+2020年1月23日，武汉封城，这个影响巨大的举措让普通民众都紧张了起来，我家也取消了年夜饭。这个时候，很多人才感觉到了危机的来临，然而实际上，这个危机已经持续一段时间了，只是没有被报道，被宣传，没有被大众知晓。
+2020年1月24日，除夕。两天来，随着武汉封城，湖北其他的城市也陆陆续续开始封城。这天晚上，朋友圈刷着襄阳0点封城的消息，我在0点钟响之前就已经睡去。我不知道该以何种心情度过这个0点。
+武汉与武汉人 微博上之前有人用“武汉人只是倒霉版的你”来告诉大家不应该随便恐武汉人。这句话非常有道理。不过我觉得，武汉人已经不仅仅是“倒霉”这个词可以概括的了。在刚封城后那几天，我刷了不少时间的微博，也通过微信群、朋友圈等渠道了解到了很多物资短缺、无法救治的现象。实际上，这个现象在现在恐怕也没有完全消除。在更远地方的人们，没有关注这些事情的人们大概无法听到，但是这是不应该被无视的，是在这次疫情中最不应该被无视的，所有人的无奈，痛苦，疲惫与悲伤。
+在每天数据增长的背后，是一条条生命，是一个个人类。数据不应该被死板的控制，生命不应该被放弃。
+媒体与民众 在这次疫情中，我也看到了媒体和民众的力量。
+这里的媒体并不是指自媒体，而是深入一线进行深度报道的记者及其背后的媒体。财新网、三联周刊、澎湃、凤凰，无论他们输出了怎样的观点，他们让我们看到了一些观点，也看到了一些事实。
+这里的民众就是指的普通民众。无论是奔赴一线的医护人员，参与建设的工人，维护秩序的民警，加班的人们，家里蹲的人们，大多数人都表现出了善意和良心。捐款捐物也好，不出去乱活动也好，很多我身边的人都做出了自己的行动，尽力而为的帮助需要帮助的人，这也是我最佩服和欣赏的。
+偏见与懒政 这次疫情中，也有让人失望、让人愤怒的事情发生。从红十字会的不作为，到小区禁止外地人返回，从百步亭社区压着不上报，到武软随便丢弃被征用宿舍里学生的物品。人们之间的偏见和政府的懒政是最让我觉得不快的，后者尤甚。我希望人们之间可以将心比心，更希望政府能出台相关措施协调，而不是让其中一方默默咽下苦果，生命或是财产受到威胁。我们谁都不希望被牺牲，我们都希望被国家和政府保护。政府是服务人民的，是保护人民的权利的。不惜一切代价，这个“一切代价”中不应该包括人们的权利，尤其是人们的生命。
+等待与等待 心理学中，悲伤的阶段分为失落-愤怒-迷茫-消极-接受。心理学中也说，要养成一个习惯需要21天。现在距离封城也过了近20天了，我也有一段时间没出门了。空旷的街道，把守着的小区大门，口罩、酒精、消毒液，害怕、慌张、不确定。再这样继续下去，我们是不是都要习惯了。我们还对那平凡甚至有些无聊的日常抱着希望吗？互联网的记忆有多少天呢？多久之后我们会淡忘呢？
+ 事实上，在人们是应该相信政府、相信政府的声音，好好做好自己的事情，还是人们应该对政府的行为持监督、批判的作用，这之中，不同的人持有不同的看法。相信前者的人对后者总是在网络上指出这错误、指出那错误不满，觉得对方在挑拨、不爱国；相信后者的人觉得自己的行为正确且理所应当，这是自己的权利。就我个人来说，我偏向监督，但也不想走极端。毕竟我个人对于公共政治、政治哲学了解不多，只是觉得有错误就要指出。</description>
+    </item>
+    
+    <item>
+      <title>Applied Deep Learning Projects</title>
+      <link>http://example.org/posts/applied-deep-learning-projects/</link>
+      <pubDate>Wed, 16 Oct 2019 15:54:34 +0000</pubDate>
+      
+      <guid>http://example.org/posts/applied-deep-learning-projects/</guid>
+      <description>Applied Deep Learning http://YLDAPhoenix11.github.io/Applied-Deep-Learning/</description>
+    </item>
+    
+    <item>
+      <title>Sentiment Analysis</title>
+      <link>http://example.org/posts/sentiment-analysis/</link>
+      <pubDate>Tue, 01 Oct 2019 16:03:58 +0000</pubDate>
+      
+      <guid>http://example.org/posts/sentiment-analysis/</guid>
+      <description>Taking some notes after I watched Stanford Coursera course &amp;ldquo;Sentiment Analysis&amp;rdquo; by Dan Jurafsky and Christopher Manning.
+ Introduction Sentiment Analysis, 也叫 opinion extraction/opinion mining/sentiment mining/subjectivity analysis，中文译作情感分析/文本情感分析，是自然语言处理 (Natural Language Processing) 的应用之一。
+根据Wiki
+ 文本情感分析（也称为意见挖掘）是指用自然语言处理、文本挖掘以及计算机语言学等方法来识别和提取原素材中的主观信息。
+ 注意这里说的是主观信息，并没有用简单的情感一词代替，这是因为sentiment analysis并不仅仅是抽取出情感。事实上，sentiment这个词虽然可以翻译为情感，有一个释义也是&amp;quot;emotion&amp;quot;，但是也有一个释义是 &amp;ldquo;an attitude, thought, or judgment prompted by feeling&amp;rdquo; (By Merriam-webster)，与opinion同义。因此sentiment analysis的sentiment不能单做为emotion看待。在本课中，Dan认为sentiment是attitude的子集，强调的主要是attitude.
+Tasks 要分析出sentiment，也就是要知道以下几个：
+ Source，是谁的sentiment Target，对什么的sentiment what/type，什么样的的sentiment 除此之外，也需要知道包含sentiment的文本  根据难度的不同，可以将sentiment analysis 分成以下task:
+ Easy模式：Polarity detection，判断positive/negative Medium模式：在判断的基础上为attitude给出强弱 Hard模式：判断target/source，以及更加复杂的attitude  Some projects   Google - Twitter Sentiment Analysis</description>
+    </item>
+    
+    <item>
+      <title>Chapter 7 Resumes</title>
+      <link>http://example.org/posts/chapter-7-resumes/</link>
+      <pubDate>Wed, 17 Apr 2019 18:14:56 +0000</pubDate>
+      
+      <guid>http://example.org/posts/chapter-7-resumes/</guid>
+      <description>This article is the reading notes of chapter2 of &amp;ldquo;cracking the PM interview&amp;rdquo;.
+ This chapter is about resume.
+This chapter can be read with next chapter.
+本章讲了resume改如何写,写什么,并且专门说明了pm的resume该怎么写,还有每个东西可以在简历上停留多久(in &amp;ldquo;what to include&amp;rdquo;)。
+The 15 Second Rule   Rule #1: Shorter is Better
+You might have to be more concise, but that’s a good thing. This means that you’re sticking to the highlights.
+  Rule #2: Bullets, Not Blobs
+Blobs of text—that is, bullets or paragraphs that are three lines or longer—tend to not be read.</description>
+    </item>
+    
+    <item>
+      <title>RecSys Intro</title>
+      <link>http://example.org/posts/recsys_intro/</link>
+      <pubDate>Wed, 17 Apr 2019 18:01:32 +0000</pubDate>
+      
+      <guid>http://example.org/posts/recsys_intro/</guid>
+      <description>Course note: overview of Recommender systems
+ 什么是推荐和推荐系统 (待施工)
+推荐系统要考虑的问题 用户面临的问题 准确率 accuracy 如何量度准确性是主要问题？KPI or Off-line test or A/B test?
+可解释性 interpreability 用户在意可解释性吗？
+马太效应 the rich get richer 这是一个以item为中心的反馈循环：
+popular items更容易被消费，然后被评高分，这使得它们更容易被推荐给用户，如此形成一个效果越来越强的正反馈循环，最终使得popular items被推荐的多，其他item被推荐的少。（这种情况同样与冷启动问题有关）
+过滤气泡 The filter bubble 这是一个以user为中心的反馈循环：
+当用户始终通过个性化的行为与产品进行交互，同时推荐又缺乏多样性、比较集中时，推荐给用户的会越来越集中。常见的比如今日头条等网站上都是与自己观点一致的信息。
+这种情况也会出现在社交网络中，当一个社交圈里的用户都非常相似时，推荐也会逐渐局限、集中。
+偶然性的内容 Serendipity serenfipity 是可以给用户带来惊喜的内容。它和新颖性novelty有所不同。novelty所推荐的东西是新颖但有一定相关性的，serendipity则是偶然的、意外的。
+Serendipity和推荐出的东西的相似度是一个trade-off。
+多样性 Diversity 大多数算法把推荐出的每一个item视为一类，但是有可能推荐出的每一个item都属于一个类。可以加一个多样性参数来判断用户对于某一类更有兴趣。
+用户的兴趣随着时间变化 Time-variance 随着时间变化，用户可能对某一类感兴趣或者失去了兴趣，也可能其兴趣在好几个类中不断地变来变去
+渴望的 vs. 实际的 aspirational vs actual 用户的评分可能不是反映他们实际上会消费购买的，而是反映他们想要的。
+一篇medium文章谈到了这个
+工程中的问题 冷启动 cold-start 针对新加入的item：基于内容的推荐 content based等
+针对新加入的user：基于地理位置location based, 用户描述user description 等
+可扩展性 Scalability 在实际使用中机器学习算法必须考虑大数据的问题。有些算法能更好的处理大数据。通常我们需要在速度和准确度之间进行取舍。</description>
+    </item>
+    
+    <item>
+      <title>Chapter 2 The Product Manager Role</title>
+      <link>http://example.org/posts/chapter-2_the-product-manager-role/</link>
+      <pubDate>Wed, 06 Feb 2019 16:14:56 +0000</pubDate>
+      
+      <guid>http://example.org/posts/chapter-2_the-product-manager-role/</guid>
+      <description>This article is the reading notes of chapter2 of &amp;ldquo;cracking the PM interview&amp;rdquo;.
+ This chapter is about the PM: what is PM, their functions and difference with other roles.
+What is a PM?  Some people will say that the product manager (sometimes called the program manager or project manager) is like a mini-CEO of their product. That’s accurate in some ways, since a PM takes holistic responsibility for the product, from the little details to the big picture.</description>
     </item>
     
   </channel>

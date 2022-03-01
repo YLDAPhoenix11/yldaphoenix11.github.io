@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Nothing</title>
-    <link>http://example.org/posts/</link>
-    <description>Recent content in Posts on Nothing</description>
+    <title>生活水文 on Nothing</title>
+    <link>http://example.org/tags/%E7%94%9F%E6%B4%BB%E6%B0%B4%E6%96%87/</link>
+    <description>Recent content in 生活水文 on Nothing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 25 Feb 2022 23:59:08 +0000</lastBuildDate><atom:link href="http://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 25 Feb 2022 23:59:08 +0000</lastBuildDate><atom:link href="http://example.org/tags/%E7%94%9F%E6%B4%BB%E6%B0%B4%E6%96%87/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>我，深漂两年</title>
       <link>http://example.org/posts/%E6%88%91%E6%B7%B1%E6%BC%82%E4%B8%A4%E5%B9%B4/</link>
@@ -49,101 +49,6 @@ chaos 不知不觉，苟到工作快两年了，我还没挪窝。新的一年�
     </item>
     
     <item>
-      <title>RecSys Reading</title>
-      <link>http://example.org/posts/recsys_reading/</link>
-      <pubDate>Sun, 22 Mar 2020 20:30:00 +0000</pubDate>
-      
-      <guid>http://example.org/posts/recsys_reading/</guid>
-      <description>Course note: Reading of Recommender systems
- 在Personalization这门课上Prof给的阅读内容：Papers Variational Autoencoders for Collaborative Filtering
-Deep content-based music recommendation
-Training and Testing of Recommender Systems on Data Missing Not at Random
-Item-Based Collaborative Filtering Recommendation Algorithms
-BPR: Bayesian Personalized Ranking from Implicit Feedback
-Graph Convolutional Neural Networks for Web-Scale Recommender Systems
-Does Wikipedia Information Help Netflix Predictions?
-Field-aware Factorization Machines for CTR Prediction
-Deep Learning based Recommender System: A Survey and New Perspectives</description>
-    </item>
-    
-    <item>
-      <title>Final Project</title>
-      <link>http://example.org/posts/final-project/</link>
-      <pubDate>Sun, 22 Mar 2020 15:23:00 +0000</pubDate>
-      
-      <guid>http://example.org/posts/final-project/</guid>
-      <description>Course note of A/B testing on Udacity: Lesson 6
- Final Project 0. Instruction Instruction: https://docs.google.com/document/u/1/d/1aCquhIqsUApgsxQ8-SQBAigFDcfWVVohLEXcV6jWbdI/pub?embedded=True
-Experiment Overview: Free Trial Screener At the time of this experiment, Udacity courses currently have two options on the course overview page: &amp;ldquo;start free trial&amp;rdquo;, and &amp;ldquo;access course materials&amp;rdquo;. If the student clicks &amp;ldquo;start free trial&amp;rdquo;, they will be asked to enter their credit card information, and then they will be enrolled in a free trial for the paid version of the course.</description>
-    </item>
-    
-    <item>
-      <title>Analyzing Results</title>
-      <link>http://example.org/posts/analyzing-results/</link>
-      <pubDate>Sun, 22 Mar 2020 15:20:00 +0000</pubDate>
-      
-      <guid>http://example.org/posts/analyzing-results/</guid>
-      <description>Course note of A/B testing on Udacity: Lesson 5
- #Analyzing Results
-Sanity checks check invariant metrics
- population sizing metrics based on unit of diversion: experiment population and control population is comparable other metrics that should not change in experiments  Choosing Invariants   Quiz: (choose the invariant metrics, that is, choose the metrics that would be the same in experiment and control group)
- 1st: user-id is the unit of diversion, so #signed in users are random in experiment group and control groups.</description>
-    </item>
-    
-    <item>
-      <title>Design an Experiment</title>
-      <link>http://example.org/posts/design-an-experiment/</link>
-      <pubDate>Sun, 22 Mar 2020 15:18:00 +0000</pubDate>
-      
-      <guid>http://example.org/posts/design-an-experiment/</guid>
-      <description>Course note of A/B testing on Udacity: Lesson 4
- #Design an Experiment
-Choose &amp;ldquo;subject&amp;rdquo; Unit of diversion What an individual subject is in the experiment.
-Unit of diversion examples:   commonly used:
-  user id
-  stable, unchanging
-  personally identifiable
-    Anonymous id (cookie)
- changes when switching browser or device users can clear cookies    Event
- no consistent experience use only for non-user-visible changes      less common:</description>
-    </item>
-    
-    <item>
-      <title>Choosing and Characterizing metrics</title>
-      <link>http://example.org/posts/choosing-and-characterizing-metrics/</link>
-      <pubDate>Sun, 22 Mar 2020 14:48:02 +0000</pubDate>
-      
-      <guid>http://example.org/posts/choosing-and-characterizing-metrics/</guid>
-      <description>Course note of A/B testing on Udacity: Lesson 3
- Choosing and Characterizing metrics   Two types of metrics and their use cases:
- invariant checking/sanity checking metrics: metrics should not change across the experiment and the control. For example, the number of users in two groups in experiment and do they have the same distribution, like country, age, etc. For sanity checking may use multiple metrics evaludation metrics: high-level business metrics+detail metrics.</description>
-    </item>
-    
-    <item>
-      <title>Policy and Ethics for Experiments</title>
-      <link>http://example.org/posts/policy-and-ethics-for-experiments/</link>
-      <pubDate>Sun, 22 Mar 2020 12:08:00 +0000</pubDate>
-      
-      <guid>http://example.org/posts/policy-and-ethics-for-experiments/</guid>
-      <description>Course note of A/B testing on Udacity: Lesson 2
- Policy and Ethics for Experiments Main principles 1. Risk  what risk is the participant undertaking? The main threshold is whether the risk exceeds that of “minimal risk”. Minimal risk is defined as the probability and magnitude of harm that a participant would encounter in normal daily life. The harm considered encompasses physical, psychological and emotional, social, and economic concerns. If the risk exceeds minimal risk, then informed consent is required.</description>
-    </item>
-    
-    <item>
-      <title>Overview of A/B Testing</title>
-      <link>http://example.org/posts/overview-of-ab-testing/</link>
-      <pubDate>Thu, 19 Mar 2020 21:29:58 +0000</pubDate>
-      
-      <guid>http://example.org/posts/overview-of-ab-testing/</guid>
-      <description>Course note of A/B testing on Udacity: Lesson 1
- Overview of A/B Testing Overview and Introduction What is useful for A/B testing and what is not?
-  Useful when there is clear control and experiment, and good metrics to evaluate.
-  is not useful for testing new experience - change version/ a novelty effect; also not useful if missing something
-  Quiz1:
-  why A/B testing is not useful for &amp;ldquo;Online shopping company&amp;rdquo;?</description>
-    </item>
-    
-    <item>
       <title>正月十七</title>
       <link>http://example.org/posts/%E6%AD%A3%E6%9C%88%E5%8D%81%E4%B8%83/</link>
       <pubDate>Mon, 10 Feb 2020 17:42:29 +0000</pubDate>
@@ -163,84 +68,6 @@ Unit of diversion examples:   commonly used:
 偏见与懒政 这次疫情中，也有让人失望、让人愤怒的事情发生。从红十字会的不作为，到小区禁止外地人返回，从百步亭社区压着不上报，到武软随便丢弃被征用宿舍里学生的物品。人们之间的偏见和政府的懒政是最让我觉得不快的，后者尤甚。我希望人们之间可以将心比心，更希望政府能出台相关措施协调，而不是让其中一方默默咽下苦果，生命或是财产受到威胁。我们谁都不希望被牺牲，我们都希望被国家和政府保护。政府是服务人民的，是保护人民的权利的。不惜一切代价，这个“一切代价”中不应该包括人们的权利，尤其是人们的生命。
 等待与等待 心理学中，悲伤的阶段分为失落-愤怒-迷茫-消极-接受。心理学中也说，要养成一个习惯需要21天。现在距离封城也过了近20天了，我也有一段时间没出门了。空旷的街道，把守着的小区大门，口罩、酒精、消毒液，害怕、慌张、不确定。再这样继续下去，我们是不是都要习惯了。我们还对那平凡甚至有些无聊的日常抱着希望吗？互联网的记忆有多少天呢？多久之后我们会淡忘呢？
  事实上，在人们是应该相信政府、相信政府的声音，好好做好自己的事情，还是人们应该对政府的行为持监督、批判的作用，这之中，不同的人持有不同的看法。相信前者的人对后者总是在网络上指出这错误、指出那错误不满，觉得对方在挑拨、不爱国；相信后者的人觉得自己的行为正确且理所应当，这是自己的权利。就我个人来说，我偏向监督，但也不想走极端。毕竟我个人对于公共政治、政治哲学了解不多，只是觉得有错误就要指出。</description>
-    </item>
-    
-    <item>
-      <title>Applied Deep Learning Projects</title>
-      <link>http://example.org/posts/applied-deep-learning-projects/</link>
-      <pubDate>Wed, 16 Oct 2019 15:54:34 +0000</pubDate>
-      
-      <guid>http://example.org/posts/applied-deep-learning-projects/</guid>
-      <description>Applied Deep Learning http://YLDAPhoenix11.github.io/Applied-Deep-Learning/</description>
-    </item>
-    
-    <item>
-      <title>Sentiment Analysis</title>
-      <link>http://example.org/posts/sentiment-analysis/</link>
-      <pubDate>Tue, 01 Oct 2019 16:03:58 +0000</pubDate>
-      
-      <guid>http://example.org/posts/sentiment-analysis/</guid>
-      <description>Taking some notes after I watched Stanford Coursera course &amp;ldquo;Sentiment Analysis&amp;rdquo; by Dan Jurafsky and Christopher Manning.
- Introduction Sentiment Analysis, 也叫 opinion extraction/opinion mining/sentiment mining/subjectivity analysis，中文译作情感分析/文本情感分析，是自然语言处理 (Natural Language Processing) 的应用之一。
-根据Wiki
- 文本情感分析（也称为意见挖掘）是指用自然语言处理、文本挖掘以及计算机语言学等方法来识别和提取原素材中的主观信息。
- 注意这里说的是主观信息，并没有用简单的情感一词代替，这是因为sentiment analysis并不仅仅是抽取出情感。事实上，sentiment这个词虽然可以翻译为情感，有一个释义也是&amp;quot;emotion&amp;quot;，但是也有一个释义是 &amp;ldquo;an attitude, thought, or judgment prompted by feeling&amp;rdquo; (By Merriam-webster)，与opinion同义。因此sentiment analysis的sentiment不能单做为emotion看待。在本课中，Dan认为sentiment是attitude的子集，强调的主要是attitude.
-Tasks 要分析出sentiment，也就是要知道以下几个：
- Source，是谁的sentiment Target，对什么的sentiment what/type，什么样的的sentiment 除此之外，也需要知道包含sentiment的文本  根据难度的不同，可以将sentiment analysis 分成以下task:
- Easy模式：Polarity detection，判断positive/negative Medium模式：在判断的基础上为attitude给出强弱 Hard模式：判断target/source，以及更加复杂的attitude  Some projects   Google - Twitter Sentiment Analysis</description>
-    </item>
-    
-    <item>
-      <title>Chapter 7 Resumes</title>
-      <link>http://example.org/posts/chapter-7-resumes/</link>
-      <pubDate>Wed, 17 Apr 2019 18:14:56 +0000</pubDate>
-      
-      <guid>http://example.org/posts/chapter-7-resumes/</guid>
-      <description>This article is the reading notes of chapter2 of &amp;ldquo;cracking the PM interview&amp;rdquo;.
- This chapter is about resume.
-This chapter can be read with next chapter.
-本章讲了resume改如何写,写什么,并且专门说明了pm的resume该怎么写,还有每个东西可以在简历上停留多久(in &amp;ldquo;what to include&amp;rdquo;)。
-The 15 Second Rule   Rule #1: Shorter is Better
-You might have to be more concise, but that’s a good thing. This means that you’re sticking to the highlights.
-  Rule #2: Bullets, Not Blobs
-Blobs of text—that is, bullets or paragraphs that are three lines or longer—tend to not be read.</description>
-    </item>
-    
-    <item>
-      <title>RecSys Intro</title>
-      <link>http://example.org/posts/recsys_intro/</link>
-      <pubDate>Wed, 17 Apr 2019 18:01:32 +0000</pubDate>
-      
-      <guid>http://example.org/posts/recsys_intro/</guid>
-      <description>Course note: overview of Recommender systems
- 什么是推荐和推荐系统 (待施工)
-推荐系统要考虑的问题 用户面临的问题 准确率 accuracy 如何量度准确性是主要问题？KPI or Off-line test or A/B test?
-可解释性 interpreability 用户在意可解释性吗？
-马太效应 the rich get richer 这是一个以item为中心的反馈循环：
-popular items更容易被消费，然后被评高分，这使得它们更容易被推荐给用户，如此形成一个效果越来越强的正反馈循环，最终使得popular items被推荐的多，其他item被推荐的少。（这种情况同样与冷启动问题有关）
-过滤气泡 The filter bubble 这是一个以user为中心的反馈循环：
-当用户始终通过个性化的行为与产品进行交互，同时推荐又缺乏多样性、比较集中时，推荐给用户的会越来越集中。常见的比如今日头条等网站上都是与自己观点一致的信息。
-这种情况也会出现在社交网络中，当一个社交圈里的用户都非常相似时，推荐也会逐渐局限、集中。
-偶然性的内容 Serendipity serenfipity 是可以给用户带来惊喜的内容。它和新颖性novelty有所不同。novelty所推荐的东西是新颖但有一定相关性的，serendipity则是偶然的、意外的。
-Serendipity和推荐出的东西的相似度是一个trade-off。
-多样性 Diversity 大多数算法把推荐出的每一个item视为一类，但是有可能推荐出的每一个item都属于一个类。可以加一个多样性参数来判断用户对于某一类更有兴趣。
-用户的兴趣随着时间变化 Time-variance 随着时间变化，用户可能对某一类感兴趣或者失去了兴趣，也可能其兴趣在好几个类中不断地变来变去
-渴望的 vs. 实际的 aspirational vs actual 用户的评分可能不是反映他们实际上会消费购买的，而是反映他们想要的。
-一篇medium文章谈到了这个
-工程中的问题 冷启动 cold-start 针对新加入的item：基于内容的推荐 content based等
-针对新加入的user：基于地理位置location based, 用户描述user description 等
-可扩展性 Scalability 在实际使用中机器学习算法必须考虑大数据的问题。有些算法能更好的处理大数据。通常我们需要在速度和准确度之间进行取舍。</description>
-    </item>
-    
-    <item>
-      <title>Chapter 2 The Product Manager Role</title>
-      <link>http://example.org/posts/chapter-2_the-product-manager-role/</link>
-      <pubDate>Wed, 06 Feb 2019 16:14:56 +0000</pubDate>
-      
-      <guid>http://example.org/posts/chapter-2_the-product-manager-role/</guid>
-      <description>This article is the reading notes of chapter2 of &amp;ldquo;cracking the PM interview&amp;rdquo;.
- This chapter is about the PM: what is PM, their functions and difference with other roles.
-What is a PM?  Some people will say that the product manager (sometimes called the program manager or project manager) is like a mini-CEO of their product. That’s accurate in some ways, since a PM takes holistic responsibility for the product, from the little details to the big picture.</description>
     </item>
     
   </channel>

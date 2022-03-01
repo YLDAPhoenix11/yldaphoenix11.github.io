@@ -2,17 +2,111 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://example.org/posts/my-first-post/</loc>
-    <lastmod>2022-03-01T19:57:05+08:00</lastmod>
+    <loc>http://example.org/categories/</loc>
+    <lastmod>2022-02-25T23:59:08+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/categories/essays/</loc>
+    <lastmod>2022-02-25T23:59:08+00:00</lastmod>
   </url><url>
     <loc>http://example.org/</loc>
-    <lastmod>2022-03-01T19:57:05+08:00</lastmod>
+    <lastmod>2022-02-25T23:59:08+00:00</lastmod>
   </url><url>
     <loc>http://example.org/posts/</loc>
-    <lastmod>2022-03-01T19:57:05+08:00</lastmod>
-  </url><url>
-    <loc>http://example.org/categories/</loc>
+    <lastmod>2022-02-25T23:59:08+00:00</lastmod>
   </url><url>
     <loc>http://example.org/tags/</loc>
+    <lastmod>2022-02-25T23:59:08+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/posts/%E6%88%91%E6%B7%B1%E6%BC%82%E4%B8%A4%E5%B9%B4/</loc>
+    <lastmod>2022-02-25T23:59:08+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/tags/%E7%94%9F%E6%B4%BB%E6%B0%B4%E6%96%87/</loc>
+    <lastmod>2022-02-25T23:59:08+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/tags/course-notes/</loc>
+    <lastmod>2020-03-22T20:30:00+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/categories/course-notes/</loc>
+    <lastmod>2020-03-22T20:30:00+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/tags/recommender-systems/</loc>
+    <lastmod>2020-03-22T20:30:00+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/categories/recommender-systems/</loc>
+    <lastmod>2020-03-22T20:30:00+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/posts/recsys_reading/</loc>
+    <lastmod>2020-03-22T20:30:00+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/tags/data-analytics/</loc>
+    <lastmod>2020-03-22T15:23:00+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/categories/data-analytics/</loc>
+    <lastmod>2020-03-22T15:23:00+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/posts/final-project/</loc>
+    <lastmod>2020-03-22T15:23:00+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/posts/analyzing-results/</loc>
+    <lastmod>2020-03-22T15:20:00+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/posts/design-an-experiment/</loc>
+    <lastmod>2020-03-22T15:18:00+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/posts/choosing-and-characterizing-metrics/</loc>
+    <lastmod>2020-03-22T14:48:02+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/posts/policy-and-ethics-for-experiments/</loc>
+    <lastmod>2020-03-22T12:08:00+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/posts/overview-of-ab-testing/</loc>
+    <lastmod>2020-03-19T21:29:58+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/posts/%E6%AD%A3%E6%9C%88%E5%8D%81%E4%B8%83/</loc>
+    <lastmod>2020-02-10T17:42:29+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/posts/applied-deep-learning-projects/</loc>
+    <lastmod>2019-10-16T15:54:34+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/tags/course-projects/</loc>
+    <lastmod>2019-10-16T15:54:34+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/tags/deep-learning/</loc>
+    <lastmod>2019-10-16T15:54:34+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/categories/projects/</loc>
+    <lastmod>2019-10-16T15:54:34+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/tags/natural-language-processing/</loc>
+    <lastmod>2019-10-01T16:03:58+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/posts/sentiment-analysis/</loc>
+    <lastmod>2019-10-01T16:03:58+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/posts/chapter-7-resumes/</loc>
+    <lastmod>2019-04-17T18:14:56+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/categories/cracking-the-pm-interview/</loc>
+    <lastmod>2019-04-17T18:14:56+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/tags/interview/</loc>
+    <lastmod>2019-04-17T18:14:56+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/tags/product-manager/</loc>
+    <lastmod>2019-04-17T18:14:56+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/tags/reading-notes/</loc>
+    <lastmod>2019-04-17T18:14:56+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/categories/reading-notes/</loc>
+    <lastmod>2019-04-17T18:14:56+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/posts/recsys_intro/</loc>
+    <lastmod>2019-04-17T18:01:32+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/posts/chapter-2_the-product-manager-role/</loc>
+    <lastmod>2019-02-06T16:14:56+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/tags/a/b-testing/</loc>
   </url>
 </urlset>

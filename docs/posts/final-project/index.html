@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Final Project | Nothing</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Course note of A/B testing on Udacity: Lesson 6
+ Final Project 0. Instruction Instruction: https://docs.google.com/document/u/1/d/1aCquhIqsUApgsxQ8-SQBAigFDcfWVVohLEXcV6jWbdI/pub?embedded=True
+Experiment Overview: Free Trial Screener At the time of this experiment, Udacity courses currently have two options on the course overview page: &ldquo;start free trial&rdquo;, and &ldquo;access course materials&rdquo;. If the student clicks &ldquo;start free trial&rdquo;, they will be asked to enter their credit card information, and then they will be enrolled in a free trial for the paid version of the course.">
+    <meta name="generator" content="Hugo 0.92.2" />
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="Final Project" />
+<meta property="og:description" content="Course note of A/B testing on Udacity: Lesson 6
+ Final Project 0. Instruction Instruction: https://docs.google.com/document/u/1/d/1aCquhIqsUApgsxQ8-SQBAigFDcfWVVohLEXcV6jWbdI/pub?embedded=True
+Experiment Overview: Free Trial Screener At the time of this experiment, Udacity courses currently have two options on the course overview page: &ldquo;start free trial&rdquo;, and &ldquo;access course materials&rdquo;. If the student clicks &ldquo;start free trial&rdquo;, they will be asked to enter their credit card information, and then they will be enrolled in a free trial for the paid version of the course." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/final-project/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-03-22T15:23:00+00:00" />
+<meta property="article:modified_time" content="2020-03-22T15:23:00+00:00" />
+
+<meta itemprop="name" content="Final Project">
+<meta itemprop="description" content="Course note of A/B testing on Udacity: Lesson 6
+ Final Project 0. Instruction Instruction: https://docs.google.com/document/u/1/d/1aCquhIqsUApgsxQ8-SQBAigFDcfWVVohLEXcV6jWbdI/pub?embedded=True
+Experiment Overview: Free Trial Screener At the time of this experiment, Udacity courses currently have two options on the course overview page: &ldquo;start free trial&rdquo;, and &ldquo;access course materials&rdquo;. If the student clicks &ldquo;start free trial&rdquo;, they will be asked to enter their credit card information, and then they will be enrolled in a free trial for the paid version of the course."><meta itemprop="datePublished" content="2020-03-22T15:23:00+00:00" />
+<meta itemprop="dateModified" content="2020-03-22T15:23:00+00:00" />
+<meta itemprop="wordCount" content="3405">
+<meta itemprop="keywords" content="course notes,data analytics,A/B testing," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Final Project"/>
+<meta name="twitter:description" content="Course note of A/B testing on Udacity: Lesson 6
+ Final Project 0. Instruction Instruction: https://docs.google.com/document/u/1/d/1aCquhIqsUApgsxQ8-SQBAigFDcfWVVohLEXcV6jWbdI/pub?embedded=True
+Experiment Overview: Free Trial Screener At the time of this experiment, Udacity courses currently have two options on the course overview page: &ldquo;start free trial&rdquo;, and &ldquo;access course materials&rdquo;. If the student clicks &ldquo;start free trial&rdquo;, they will be asked to enter their credit card information, and then they will be enrolled in a free trial for the paid version of the course."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Nothing
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Final Project</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2020-03-22T15:23:00Z">March 22, 2020</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p><em>Course note of <a href="https://www.udacity.com/course/ab-testing--ud257">A/B testing on Udacity</a>: Lesson 6</em></p>
+<!-- raw HTML omitted -->
+<hr>
+<h1 id="final-project">Final Project</h1>
+<h2 id="0-instruction">0. Instruction</h2>
+<p>Instruction: <a href="https://docs.google.com/document/u/1/d/1aCquhIqsUApgsxQ8-SQBAigFDcfWVVohLEXcV6jWbdI/pub?embedded=True">https://docs.google.com/document/u/1/d/1aCquhIqsUApgsxQ8-SQBAigFDcfWVVohLEXcV6jWbdI/pub?embedded=True</a></p>
+<h3 id="experiment-overview-free-trial-screener">Experiment Overview: Free Trial Screener</h3>
+<p>At the time of this experiment, Udacity courses currently have two options on the course overview page: &ldquo;start free trial&rdquo;, and &ldquo;access course materials&rdquo;. If the student clicks &ldquo;start free trial&rdquo;, they will be asked to enter their credit card information, and then they will be enrolled in a free trial for the paid version of the course. After 14 days, they will automatically be charged unless they cancel first. If the student clicks &ldquo;access course materials&rdquo;, they will be able to view the videos and take the quizzes for free, but they will not receive coaching support or a verified certificate, and they will not submit their final project for feedback.</p>
+<p>In the experiment, Udacity tested a change where if the student clicked &ldquo;start free trial&rdquo;, they were asked how much time they had available to devote to the course. If the student indicated 5 or more hours per week, they would be taken through the checkout process as usual. If they indicated fewer than 5 hours per week, a message would appear indicating that Udacity courses usually require a greater time commitment for successful completion, and suggesting that the student might like to access the course materials for free. At this point, the student would have the option to continue enrolling in the free trial, or access the course materials for free instead. <a href="https://www.google.com/url?q=https://drive.google.com/a/knowlabs.com/file/d/0ByAfiG8HpNUMakVrS0s4cGN2TjQ/view?usp%3Dsharing&amp;sa=D&amp;ust=1580895798643000">This screenshot</a> shows what the experiment looks like.</p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbmspyrf9zj30wp0ixwkd.jpg" alt=""></p>
+<p>The hypothesis was that this might set clearer expectations for students upfront, thus reducing the number of frustrated students who left the free trial because they didn&rsquo;t have enough time—without significantly reducing the number of students to continue past the free trial and eventually complete the course. If this hypothesis held true, Udacity could improve the overall student experience and improve coaches' capacity to support students who are likely to complete the course.</p>
+<p>The unit of diversion is a cookie, although if the student enrolls in the free trial, they are tracked by user-id from that point forward. The same user-id cannot enroll in the free trial twice. For users that do not enroll, their user-id is not tracked in the experiment, even if they were signed in when they visited the course overview page.</p>
+<h2 id="1-experiment-design">1. Experiment Design</h2>
+<h3 id="11-metric-choice">1.1 Metric Choice</h3>
+<p><strong>List which metrics you will use as invariant metrics and evaluation metrics here.</strong> For each metric, explain both why you did or did not use it as an invariant metric and why you did or did not use it as an evaluation metric. Also, state what results you will look for in your evaluation metrics in order to launch the experiment. (These should be the same metrics you chose in the &ldquo;Choosing Invariant Metrics&rdquo; and &ldquo;Choosing Evaluation Metrics&rdquo; quizzes.)</p>
+<p>The practical significance boundary for each metric, that is, the difference that would have to be observed before that was a meaningful change for the business, is given in parentheses. All practical significance boundaries are given as absolute changes. Any place &ldquo;unique cookies&rdquo; are mentioned, the uniqueness is determined by day. (That is, the same cookie visiting on different days would be counted twice.) User-ids are automatically unique since the site does not allow the same user-id to enroll twice.</p>
+<ul>
+<li><strong>Number of cookies:</strong> That is, number of unique cookies to view the course overview page. (dmin=3000)</li>
+<li><strong>Number of user-ids:</strong> That is, number of users who enroll in the free trial. (dmin=50)</li>
+<li><strong>Number of clicks:</strong> That is, number of unique cookies to click the &ldquo;Start free trial&rdquo; button (which happens before the free trial screener is trigger). (dmin=240)</li>
+<li><strong>Click-through-probability:</strong> That is, number of unique cookies to click the &ldquo;Start free trial&rdquo; button divided by number of unique cookies to view the course overview page. (dmin=0.01)</li>
+<li><strong>Gross conversion:</strong> That is, number of user-ids to complete checkout and enroll in the free trial divided by number of unique cookies to click the &ldquo;Start free trial&rdquo; button. (dmin= 0.01)</li>
+<li><strong>Retention:</strong> That is, number of user-ids to remain enrolled past the 14-day boundary (and thus make at least one payment) divided by number of user-ids to complete checkout. (dmin=0.01)</li>
+<li><strong>Net conversion:</strong> That is, number of user-ids to remain enrolled past the 14-day boundary (and thus make at least one payment) divided by the number of unique cookies to click the &ldquo;Start free trial&rdquo; button. (dmin= 0.0075)</li>
+</ul>
+<p>You should also decide now what results you will be looking for in order to launch the experiment. Would a change in any one of your evaluation metrics be sufficient? Would you want to see multiple metrics all move or not move at the same time in order to launch? This decision will inform your choices while designing the experiment.</p>
+<ol>
+<li><!-- raw HTML omitted -->Firstly, draw the funnel to get the better understanding<!-- raw HTML omitted --></li>
+</ol>
+<p><img src="https://tva1.sinaimg.cn/large/0082zybpgy1gbnzbxi7etj30k00b9wf0.jpg" alt=""></p>
+<ol start="2">
+<li>
+<p><!-- raw HTML omitted -->Choose invariant metrics<!-- raw HTML omitted --></p>
+<p>number of cookies, number of clicks and click-through-probabilty are invariant metrics. They happends before the scrinner is trigger. And #cookies is also the unit of diversion.</p>
+<p>Besides, <em>without significantly reducing the number of students to continue past the free trial and eventually complete the course</em> is in hypothesis. Therefore, Net conversion (I think it indicates whether the #user-ids remaining enrolled past the 14-day bounday has changed or not to come extent) is in evaluation metric instead of invariant metrics. Since it is after change of the screener and we are not certain that #user-ids remaining enrolled will not change.</p>
+</li>
+<li>
+<p><!-- raw HTML omitted -->Choose evalution metrics<!-- raw HTML omitted --></p>
+<p>Metrics must be enough, relevant and accessible to evaluate the experiment. When choosing metrics, we need to <strong>understand the hypothesis</strong>.</p>
+<p>Hypothesis: <em>The hypothesis was that this might set clearer expectations for students upfront, thus reducing the number of frustrated students who left the free trial because they didn&rsquo;t have enough time—without significantly reducing the number of students to continue past the free trial and eventually complete the course.</em></p>
+<p>本题有多个答案：</p>
+<ol>
+<li>Gross conversion + Rentention + Net conversion</li>
+<li>Rentention + Net conversion</li>
+<li>Gross conversion + Net conversion</li>
+</ol>
+<p>解释：</p>
+<ol>
+<li>
+<p>I think Rentention is the most important, since it indicates the fraction of frustrated students who left the free trial. Rentention should increase. Gross conversion will also change. And net conversion can be calculated with the other two (Net conversion = rentention * gross conversion).</p>
+<p>If the hypothesis is true, it must satisfied:</p>
+<ul>
+<li>Rentention increases: <em>educing the number of frustrated students</em></li>
+<li>Gross conversion decreases: <em>set clearer expectations for students</em></li>
+<li>Net conversion does not change: <em>without significantly reducing the number of students to continue past the free trial</em> (to some extent, since <strong>it will take too long to measure #user-ids to complete courses</strong>)</li>
+</ul>
+</li>
+<li>
+<p>为什么没有#user-ids: #user-ids will be different in control and experiment groups if hypothesis is true. In (reference)[https://github.com/shubhamlal11/Udacity-AB-Testing-Final-Project], the author does not choose it because it is not normaled.  ANother reason might be that this metric just show a change of number, but does not indicate a change of rate; Compared with other metrics, it is less relevant. I chose it incorrectly.</p>
+</li>
+<li>
+<p>Finally, I chose three metrics as evaluation metrics: Gross conversion, Rentention, Net conversion.</p>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="12-measuring-variability">1.2 Measuring Variability</h3>
+<p><a href="https://www.google.com/url?q=https://docs.google.com/a/knowlabs.com/spreadsheets/d/1MYNUtC47Pg8hdoCjOXaHqF-thheGpUshrFA21BAJnNc/edit%23gid%3D0&amp;sa=D&amp;ust=1580895798646000">This spreadsheet</a> contains rough estimates of the baseline values for these metrics (again, these numbers have been changed from Udacity&rsquo;s true numbers).</p>
+<p><img src="https://tva1.sinaimg.cn/large/0082zybpgy1gbnzbuj64dj30my087q6k.jpg" alt=""></p>
+<p>**List the standard deviation of each of your evaluation metrics. **For each metric you selected as an evaluation metric, estimate its standard deviation analytically, given a sample size of 5000 cookies visiting the course view page. Do you expect the analytic estimates to be accurate? That is, for which metrics, if any, would you want to collect an empirical estimate of the variability if you had time? (These should be the answers from the &ldquo;Calculating standard deviation&rdquo; quiz.)</p>
+<ol start="4">
+<li>
+<p><!-- raw HTML omitted -->Figure out the distribution of metrics<!-- raw HTML omitted --></p>
+<p>Gross onversion, Rentention and Net conversion are all probability, so they are all binomial distribution. Considering the number of cookies/ clicks/ enroll, these binomial distribution can be approximated as normal distribution. (See Choosing and Characterizing metrics).</p>
+</li>
+<li>
+<p><!-- raw HTML omitted -->Calculate the standard deviation analytically<!-- raw HTML omitted --></p>
+<p>unit of diversion : cookie</p>
+<p><strong>Attention: the unit of analysis and the unit in the sample size (that is, cookie visiting the course view page)</strong></p>
+<p>When approximate as normal, $SD = \sqrt{\frac{p*(1-p)}{N}}$</p>
+<p>Gross conversion (<strong>based on click</strong>): N = 5000*0.08 = 400, p = 0.20625, SD = 0.0202</p>
+<p>Rentention (<strong>based on enroll</strong>): N = 5000*(660/40000) = 82.5 , p = 0.53, SD = 0.0549</p>
+<p>Net conversion (<strong>based on click</strong>): N = 5000*0.08 = 400, p = 0.1093125, SD = 0.0156</p>
+<p>If unit of analysis and unit of diversion is different, then empirical and analytical will be different. So empirical variation and analytical variation of rentention might be different (unit of analysis of rentention: user-id).</p>
+</li>
+</ol>
+<h3 id="13-sizing">1.3 Sizing</h3>
+<h4 id="131-choosing-number-of-samples-given-power">1.3.1 Choosing Number of Samples given Power</h4>
+<p>**Indicate whether you will use the Bonferroni correction during your analysis phase, and give the number of pageviews you will need to power you experiment appropriately. **Using the analytic estimates of variance, how many pageviews <strong>total</strong> (across both groups) would you need to collect to adequately power the experiment? Use an alpha of 0.05 and a beta of 0.2. Make sure you have enough power for <strong>each</strong> metric. (These should be the answers from the &ldquo;Calculating Number of Pageviews&rdquo; quiz.)</p>
+<ol start="6">
+<li>
+<p><!-- raw HTML omitted -->Calculate size of A/B testing<!-- raw HTML omitted --></p>
+<p>Attetion:</p>
+<ol>
+<li>When using calculator get the sample size, we need to <strong>look at the unit of sample size in calculator and convert it to corresponded to the unit we need.</strong> It is usually a more high-level unit. (In this example, it is the course overview pageviews.) <strong>最好的方法是计算的时候就带上单位。</strong></li>
+<li>Using this online (calculator)[https://www.evanmiller.org/ab-testing/sample-size.html], it gives sample size of on group, but we need <strong>two groups.</strong></li>
+<li>For <strong>multiple metrics</strong>, calculate the size respectively then choose the maximum one. Also, for multiple metrics, we need to look at Bonferroni correction.</li>
+</ol>
+<p>When I use $ \alpha = 2% $ (Bonferroni correction, the calculator does not have $\alpha = 0.0167$),  $\beta = 80%$ in the calculator above:</p>
+<ul>
+<li>
+<p>Gross conversion:</p>
+<p>sample size in calculator: <strong>33014 clicks per gruoup</strong>;</p>
+<p>pageviews: $33014/0.08*2$ = 825350 pageviews</p>
+</li>
+<li>
+<p>Rentention:</p>
+<p>sample size in calculator: <strong>50013 enrollment per group</strong>;</p>
+<p>pageviews: $50013/\frac{660}{40000}*2$ = 6062182 pageviews​</p>
+</li>
+<li>
+<p>Net conversion:</p>
+<p>sample size in calculator: <strong>35016 clicks per group</strong>;</p>
+<p>pageviews: $35016/0.08*2$ = 875400 pageviews</p>
+</li>
+</ul>
+<p>Max: 6062182 pageviews</p>
+</li>
+</ol>
+<h4 id="132-choosing-duration-vs-exposure">1.3.2 Choosing Duration vs. Exposure</h4>
+<p><strong>Indicate what fraction of traffic you would divert to this experiment and, given this, how many days you would need to run the experiment.</strong> What percentage of Udacity&rsquo;s traffic would you divert to this experiment (assuming there were no other experiments you wanted to run simultaneously)? Is the change risky enough that you wouldn&rsquo;t want to run on all traffic? Given the percentage you chose, how long would the experiment take to run, using the analytic estimates of variance? If the answer is longer than a few weeks, then this is unreasonably long, and you should reconsider an earlier decision. (These should be the answers from the &ldquo;Choosing Duration and Exposure&rdquo; quiz.)</p>
+<ol start="7">
+<li>
+<p><!-- raw HTML omitted -->choose duration and exposure<!-- raw HTML omitted --></p>
+<p>According to the Baseline Value, Unique cookies to view course overview page per day is 40000. If we need 6062182 pageviews and all traffic, it will take 151 days. It is too long.</p>
+<p>Look at the pageviews needed by each metrics, evaluating on Rentention will take much more pageviews than the other two. In the Choose Evaluation Metrics part, it is also okay to choose &ldquo;Gross conversion + Net conversion&rdquo;, since</p>
+<ol>
+<li>If gross conversion decreases and net conversion remains unchanged (or increases), it can be infered that rentention increases.</li>
+<li>To some extent, gross conversion itself can also indicates that whether the change set a clearer expectation for students.</li>
+</ol>
+<p>(Similarly, rentention + net conversion is also okay.)</p>
+<p><strong>Attention: When using Bonferroni correction, change #metrics will change $\alpha$.</strong></p>
+<p>If using these two metrics, we will need 791500 pageviews; if we use all traffic, it will take about 20 days.</p>
+<p>if using these two metrics and without Bonferroni correction, we will need 685325 pageviews; If using all traffic, it will take about 18 days; If using 50% of the traffic, it will take about 35 days.</p>
+<p>All these three settings are okay. Since these experiment is not high-risky (not decrease #users remaining enrolled), it is okay to use all traffic.</p>
+</li>
+</ol>
+<h2 id="2-experiment-analysis">2. Experiment Analysis</h2>
+<p>The data for you to analyze is <a href="https://www.google.com/url?q=https://docs.google.com/a/knowlabs.com/spreadsheets/d/1Mu5u9GrybDdska-ljPXyBjTpdZIUev_6i7t4LRDfXM8/edit%23gid%3D0&amp;sa=D&amp;ust=1580895798648000">here</a>. This data contains the raw information needed to compute the above metrics, broken down day by day. Note that there are two sheets within the spreadsheet - one for the experiment group, and one for the control group.</p>
+<p><img src="https://tva1.sinaimg.cn/large/0082zybpgy1gbnzbs3rf6j30qr0cu44f.jpg" alt=""></p>
+<p>The meaning of each column is:</p>
+<ul>
+<li><strong>Pageviews:</strong> Number of unique cookies to view the course overview page that day.</li>
+<li><strong>Clicks:</strong> Number of unique cookies to click the course overview page that day. (I think this should be click on &ldquo;start free trial&rdquo;)</li>
+<li><strong>Enrollments:</strong> Number of user-ids to enroll in the free trial that day.</li>
+<li><strong>Payments:</strong> Number of user-ids who who enrolled on that day to remain enrolled for 14 days and thus make a payment. (Note that the date for this column is the start date, that is, the date of enrollment, rather than the date of the payment. The payment happened 14 days later. Because of this, the enrollments and payments are tracked for 14 fewer days than the other columns.)</li>
+</ul>
+<h3 id="21-sanity-checks">2.1 Sanity Checks</h3>
+<p><strong>For each of your invariant metrics, give the 95% confidence interval for the value you expect to observe, the actual observed value, and whether the metric passes your sanity check.</strong></p>
+<p>Start by checking whether your invariant metrics are equivalent between the two groups. If the invariant metric is a simple count that should be randomly split between the 2 groups, you can use a binomial test as demonstrated in Lesson 5. Otherwise, you will need to construct a confidence interval for a difference in proportions using a similar strategy as in Lesson 1, then check whether the difference between group values falls within that confidence level.  (These should be the answers from the &ldquo;Sanity Checks&rdquo; quiz.)</p>
+<p>If your sanity checks fail, look at the day by day data and see if you can offer any insight into what is causing the problem.</p>
+<ol start="8">
+<li>
+<p><!-- raw HTML omitted -->Figure out the distribution of metrics<!-- raw HTML omitted --></p>
+<ul>
+<li><strong>#cookies &amp; #clicks</strong>: binomial distribution with p = 0.5, either assigned in control group or experiment group.</li>
+<li>**click-through-probability (CTP): **binomial probability with p = Mean ($CTR_{control}$), N = $N_{exp}$ (If this metric is not influenced by experiment, then observed value = expected value; the probability is the expected value, and there are $N_{exp}$ trials.)</li>
+</ul>
+</li>
+<li>
+<p><!-- raw HTML omitted -->Calculate the confidence interval and the observed value<!-- raw HTML omitted --></p>
+<ul>
+<li>
+<p><strong>#cookies &amp; #clicks</strong>:</p>
+<p>expected value = 0.5</p>
+<p>observed value = $\frac{N_c}{N_c+N_e}$</p>
+<p>m = $1.96<em>SD= \sqrt{\frac{0.5</em>0.5}{N_{c}+N_{e}}}*1.96$</p>
+<p>confidence interval: (expected value - m,expected value + m)</p>
+<p>($N_C$: numbers (such as #clicks, #cookies) in control group, $N_e$: numbers in experiment group)</p>
+</li>
+<li>
+<p><strong>click-through-probability (CTP)</strong></p>
+<p>expected value = Mean ($CTR_{control}$)</p>
+<p>observed value = Mean ($CTR_{experiment}$)</p>
+<p>m = $1.96<em>SD= \sqrt{\frac{expected</em>(1-expected)}{N_{e}}}*1.96$</p>
+<p>confidence interval: (expected value - m,expected value + m)</p>
+<p>($N$: based on cookies of course overview page)</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="22-result-analysis">2.2 Result Analysis</h3>
+<h4 id="221-check-for-practical-and-statistical-significance">2.2.1 Check for Practical and Statistical Significance</h4>
+<p><strong>For each of your evaluation metrics, give a 95% confidence interval around the difference between the experiment and control groups. Indicate whether each metric is statistically and practically significant.</strong> A metric is statistically significant if the confidence interval does not include 0 (that is, you can be confident there was a change), and it is practically significant if the confidence interval does not include the practical significance boundary (that is, you can be confident there is a change that matters to the business.)</p>
+<p>If you have chosen multiple evaluation metrics, you will need to decide whether to use the Bonferroni correction. When deciding, keep in mind the results you are looking for in order to launch the experiment. Will the fact that you have multiple metrics make those results more likely to occur by chance than the alpha level of 0.05? (These should be the answers from the &ldquo;Effect Size Tests&rdquo; quiz.)</p>
+<ol start="10">
+<li>
+<p><!-- raw HTML omitted -->Calculate metrics and p_pool​<!-- raw HTML omitted --></p>
+<p>Now, this part is based on t-test (two samples).</p>
+<ol>
+<li>calculate the gross conversion and net conversion of control and experiment</li>
+<li>calculate their difference of experiment and control</li>
+</ol>
+<p><strong>Attention:</strong></p>
+<ol>
+<li>
+<p><strong>Do not use the average of gross/net conversion every day to get the gross/net conversion of control/experiment group</strong></p>
+<p><strong>$GrossConversion_{con} = \sum{Enroll_{con}/\sum{Click_{con}}}$</strong></p>
+<p><strong>instead of</strong></p>
+<p><strong>$GrossConversion_{con} = mean(GrossConversion^{daily}_{con})$</strong></p>
+<p>直接使用总体，不要使用每日平均</p>
+</li>
+<li>
+<p><strong>Gross/net conversion is based on first 23 days, not all days; do not include the last 14 days</strong></p>
+<p>$\sum{Click}$: do not include the click in last 14 days, since $\sum{Enroll/Payment}$ do not include the last 14 days.</p>
+</li>
+</ol>
+</li>
+<li>
+<p><!-- raw HTML omitted -->Calculate confidence interval and compare it with practical and statistical significance<!-- raw HTML omitted --></p>
+<p>Use the method in &ldquo;Lesson 1: AB testing&rdquo;.</p>
+<ol>
+<li>$diff = p_{exp}-p_{con}$</li>
+<li>$p_{pool}=(X_{cont}+X_{exp})/(N_{cont}+N_{exp})$</li>
+<li>$SE_{pool} = \sqrt{(p_{pool}<em>(1-p_{pool})</em>(\frac{1}{N_{cont}}+\frac{1}{N_{exp}})}$</li>
+<li>$m = z*SE_{pool}$</li>
+<li>$lower bound = diff-m$, $upper bound = diff+m$</li>
+</ol>
+<p><strong>Attention:</strong></p>
+<p><strong>I do not use the method in &ldquo;Lesson 5: Analyzing the Result&rdquo;, because I do not know the empirical SE, which need to be calculated by A/A tests. On the other hand, the metric is a probability soI can assume it as binomial distribution and calculate p_pool and SE_pool by appximating it as normal distribution.</strong></p>
+<p>Since I use Bonferroni correction, z = 2.24</p>
+<ul>
+<li>
+<p>For Gross conversion:</p>
+<p>$GrossConversion_{con} = \sum{Enroll_{con}/\sum{Click_{con}}}=0.2189$</p>
+<p>$GrossConversion_{exp} = \sum{Enroll_{exp}/\sum{Click_{exp}}}=0.1983$</p>
+<p>$GrossConversion_{diff} = GrossConversion_{exp}-GrossConversion_{con}=-0.0206$</p>
+<p>$GrossConversion_{pool} =  \frac{\sum{Enroll_{con}}+\sum{Enroll_{exp}}}{\sum{Click_{con}}+\sum{click_{exp}}} = 0.2086$</p>
+<p>$GrossConversion_{SE} = \sqrt{(GrossConversion_{pool}<em>(1-GrossConversion_{pool})</em>(\frac{1}{Click_{con}}+\frac{1}{Click_{exp}})} =0.0044$</p>
+<p>$GrossConversion_{m} = z*GrossConversion_{SE} = 0.0098$</p>
+<p>$GrossConversion_{lowerbound} = GrossConversion_{diff}-GrossConversion_{m} = -0.0303$</p>
+<p>$GrossConversion_{upperbound} = GrossConversion_{diff}+GrossConversion_{m}= -0.0108$</p>
+<p>It is both statistical significant and practical significant.</p>
+</li>
+<li>
+<p>For Net conversion:</p>
+<p>$NetConversion_{con} = \sum{Payment_{con}/\sum{Click_{con}}}=0.1176$</p>
+<p>$NetConversion_{exp} = \sum{Payment_{exp}/\sum{Click_{exp}}}=0.1127$</p>
+<p>$NetConversion_{diff} = NetConversion_{exp}-NetConversion_{con}=-0.0049$</p>
+<p>$NetConversion_{pool} =  \frac{\sum{Payment_{con}}+\sum{Payment_{exp}}}{\sum{Click_{con}}+\sum{click_{exp}}} = 0.1151$</p>
+<p>$NetConversion_{SE} = \sqrt{(NetConversion_{pool}<em>(1-NetConversion_{pool})</em>(\frac{1}{Click_{con}}+\frac{1}{Click_{exp}})} =0.0034$</p>
+<p>$NetConversion_{m} = z*NetConversion_{SE} = 0.0077$</p>
+<p>$NetConversion_{lowerbound} = NetConversion_{diff}-NetConversion_{m} = -0.0126$</p>
+<p>$NetConversion_{upperbound} = NetConversion_{diff}+NetConversion_{m}= 0.0028$</p>
+<p>It is neither statistical significant nor practical significant.</p>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="222-run-sign-tests">2.2.2 Run Sign Tests</h4>
+<p><strong>For each of your evaluation metrics, do a sign test using the day-by-day data, and report the p-value of the sign test and whether the result is statistically significant.</strong>  For each evaluation metric, do a sign test using the day-by-day breakdown. If the sign test does not agree with the confidence interval for the difference, see if you can figure out why. (These should be the answers from the &ldquo;Sign Tests&rdquo; quiz.)</p>
+<ol start="12">
+<li>
+<p><!-- raw HTML omitted -->Calculate the sign tests<!-- raw HTML omitted --></p>
+<p>onlinne calculator: <a href="https://www.graphpad.com/quickcalcs/binomial1/">https://www.graphpad.com/quickcalcs/binomial1/</a>, p = 0.5</p>
+<p>For gross connversion: 23 trials, 4 success (For daily gross conversion, exp&gt;con 4 times), p-value = 0.0026, statistical significant</p>
+<p>For net conversion: 23 trials, 10 success  (For daily net convzersion, exp&gt;con 10 times), p-value =0.6776, not statistical significant</p>
+</li>
+</ol>
+<h3 id="23-make-a-recommendation">2.3 Make a Recommendation</h3>
+<p>Finally, make a recommendation. Would you launch this experiment, not launch it, dig deeper, run a follow-up experiment, or is it a judgment call? If you would dig deeper, explain what area you would investigate. If you would run follow-up experiments, briefIy describe that experiment. If it is a judgment call, explain what factors would be relevant to the decision.</p>
+<ol start="13">
+<li>
+<p><!-- raw HTML omitted -->make a recommendation<!-- raw HTML omitted --></p>
+<p>The result analysis suggests that the screener will decrease the gross conversion, but do not significantly decrease the net conversion. However, considering that the lower bound of net conversion&rsquo;s confidence interval is -0.0126, whose value is higher than dmin = 0.075. Thus, there is possibility that the change will lead to a decrease of net conversion. Therefore, I will not launch this experiment now, but break down to every day and slice to find the reason of the change of net conversion. Besides, I also tend to continue this experiment for several days to collect more data.</p>
+</li>
+</ol>
+<h2 id="3-follow-up-experiment-how-to-reduce-early-cancellations">3. Follow-Up Experiment: How to Reduce Early Cancellations</h2>
+<p>If you wanted to reduce the number of frustrated students who cancel early in the course, what experiment would you try? Give a brief description of the change you would make, what your hypothesis would be about the effect of the change, what metrics you would want to measure, and what unit of diversion you would use. Include an explanation of each of your choices.</p>
+<ol start="14">
+<li>
+<p><!-- raw HTML omitted -->Follow-up experiment<!-- raw HTML omitted --></p>
+<p>(I do not think the meaning of the question is clear. I assume that the cancellation means the cancellations in the first 14-days, after enrollment.)</p>
+<p>Based on the experiment above, I would also try to measure whether the usre can handle this course or not by letting he/she take quizes about pre-requisite knowledge. After he/she pass the screener in the experiment above, there would be a quiz about pre-requisite kowledge; If completing this course does not need any prerequisite knowledge, there will not be this quiz. If he/she cannot pass the quiz, the system show a message to suggest him/her to take a lower level courses, or access the course materials for free . Otherwise, the user can enroll in the course and complete checkout.</p>
+<p>The hypothesis will be similar to the hypothesis in the experiment above.</p>
+</li>
+</ol>
+<p>Reference:</p>
+<p><a href="https://github.com/shubhamlal11/Udacity-AB-Testing-Final-Project">https://github.com/shubhamlal11/Udacity-AB-Testing-Final-Project</a></p>
+<p><a href="https://github.com/winkelman/udacity-dand-ab-test">https://github.com/winkelman/udacity-dand-ab-test</a></p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/course-notes" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">course notes</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/data-analytics" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">data analytics</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/a/b-testing" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">A/B testing</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/analyzing-results/">Analyzing Results</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/design-an-experiment/">Design an Experiment</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/choosing-and-characterizing-metrics/">Choosing and Characterizing metrics</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/policy-and-ethics-for-experiments/">Policy and Ethics for Experiments</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/overview-of-ab-testing/">Overview of A/B Testing</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/sentiment-analysis/">Sentiment Analysis</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/recsys_intro/">RecSys Intro</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://example.org/" >
+    &copy;  Nothing 2022 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div></div>
+  </div>
+</footer>
+
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>natural language processing on Nothing</title>
+    <link>http://example.org/tags/natural-language-processing/</link>
+    <description>Recent content in natural language processing on Nothing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 01 Oct 2019 16:03:58 +0000</lastBuildDate><atom:link href="http://example.org/tags/natural-language-processing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sentiment Analysis</title>
+      <link>http://example.org/posts/sentiment-analysis/</link>
+      <pubDate>Tue, 01 Oct 2019 16:03:58 +0000</pubDate>
+      
+      <guid>http://example.org/posts/sentiment-analysis/</guid>
+      <description>Taking some notes after I watched Stanford Coursera course &amp;ldquo;Sentiment Analysis&amp;rdquo; by Dan Jurafsky and Christopher Manning.
+ Introduction Sentiment Analysis, 也叫 opinion extraction/opinion mining/sentiment mining/subjectivity analysis，中文译作情感分析/文本情感分析，是自然语言处理 (Natural Language Processing) 的应用之一。
+根据Wiki
+ 文本情感分析（也称为意见挖掘）是指用自然语言处理、文本挖掘以及计算机语言学等方法来识别和提取原素材中的主观信息。
+ 注意这里说的是主观信息，并没有用简单的情感一词代替，这是因为sentiment analysis并不仅仅是抽取出情感。事实上，sentiment这个词虽然可以翻译为情感，有一个释义也是&amp;quot;emotion&amp;quot;，但是也有一个释义是 &amp;ldquo;an attitude, thought, or judgment prompted by feeling&amp;rdquo; (By Merriam-webster)，与opinion同义。因此sentiment analysis的sentiment不能单做为emotion看待。在本课中，Dan认为sentiment是attitude的子集，强调的主要是attitude.
+Tasks 要分析出sentiment，也就是要知道以下几个：
+ Source，是谁的sentiment Target，对什么的sentiment what/type，什么样的的sentiment 除此之外，也需要知道包含sentiment的文本  根据难度的不同，可以将sentiment analysis 分成以下task:
+ Easy模式：Polarity detection，判断positive/negative Medium模式：在判断的基础上为attitude给出强弱 Hard模式：判断target/source，以及更加复杂的attitude  Some projects   Google - Twitter Sentiment Analysis</description>
+    </item>
+    
+  </channel>
+</rss>

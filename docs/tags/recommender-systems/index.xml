@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>recommender systems on Nothing</title>
+    <link>http://example.org/tags/recommender-systems/</link>
+    <description>Recent content in recommender systems on Nothing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 22 Mar 2020 20:30:00 +0000</lastBuildDate><atom:link href="http://example.org/tags/recommender-systems/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RecSys Reading</title>
+      <link>http://example.org/posts/recsys_reading/</link>
+      <pubDate>Sun, 22 Mar 2020 20:30:00 +0000</pubDate>
+      
+      <guid>http://example.org/posts/recsys_reading/</guid>
+      <description>Course note: Reading of Recommender systems
+ 在Personalization这门课上Prof给的阅读内容：Papers Variational Autoencoders for Collaborative Filtering
+Deep content-based music recommendation
+Training and Testing of Recommender Systems on Data Missing Not at Random
+Item-Based Collaborative Filtering Recommendation Algorithms
+BPR: Bayesian Personalized Ranking from Implicit Feedback
+Graph Convolutional Neural Networks for Web-Scale Recommender Systems
+Does Wikipedia Information Help Netflix Predictions?
+Field-aware Factorization Machines for CTR Prediction
+Deep Learning based Recommender System: A Survey and New Perspectives</description>
+    </item>
+    
+    <item>
+      <title>RecSys Intro</title>
+      <link>http://example.org/posts/recsys_intro/</link>
+      <pubDate>Wed, 17 Apr 2019 18:01:32 +0000</pubDate>
+      
+      <guid>http://example.org/posts/recsys_intro/</guid>
+      <description>Course note: overview of Recommender systems
+ 什么是推荐和推荐系统 (待施工)
+推荐系统要考虑的问题 用户面临的问题 准确率 accuracy 如何量度准确性是主要问题？KPI or Off-line test or A/B test?
+可解释性 interpreability 用户在意可解释性吗？
+马太效应 the rich get richer 这是一个以item为中心的反馈循环：
+popular items更容易被消费，然后被评高分，这使得它们更容易被推荐给用户，如此形成一个效果越来越强的正反馈循环，最终使得popular items被推荐的多，其他item被推荐的少。（这种情况同样与冷启动问题有关）
+过滤气泡 The filter bubble 这是一个以user为中心的反馈循环：
+当用户始终通过个性化的行为与产品进行交互，同时推荐又缺乏多样性、比较集中时，推荐给用户的会越来越集中。常见的比如今日头条等网站上都是与自己观点一致的信息。
+这种情况也会出现在社交网络中，当一个社交圈里的用户都非常相似时，推荐也会逐渐局限、集中。
+偶然性的内容 Serendipity serenfipity 是可以给用户带来惊喜的内容。它和新颖性novelty有所不同。novelty所推荐的东西是新颖但有一定相关性的，serendipity则是偶然的、意外的。
+Serendipity和推荐出的东西的相似度是一个trade-off。
+多样性 Diversity 大多数算法把推荐出的每一个item视为一类，但是有可能推荐出的每一个item都属于一个类。可以加一个多样性参数来判断用户对于某一类更有兴趣。
+用户的兴趣随着时间变化 Time-variance 随着时间变化，用户可能对某一类感兴趣或者失去了兴趣，也可能其兴趣在好几个类中不断地变来变去
+渴望的 vs. 实际的 aspirational vs actual 用户的评分可能不是反映他们实际上会消费购买的，而是反映他们想要的。
+一篇medium文章谈到了这个
+工程中的问题 冷启动 cold-start 针对新加入的item：基于内容的推荐 content based等
+针对新加入的user：基于地理位置location based, 用户描述user description 等
+可扩展性 Scalability 在实际使用中机器学习算法必须考虑大数据的问题。有些算法能更好的处理大数据。通常我们需要在速度和准确度之间进行取舍。</description>
+    </item>
+    
+  </channel>
+</rss>
