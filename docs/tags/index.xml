@@ -1,108 +1,108 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Nothing</title>
-    <link>http://example.org/tags/</link>
-    <description>Recent content in Tags on Nothing</description>
+    <title>Tags on Nothingness</title>
+    <link>http://cyfz11.com/tags/</link>
+    <description>Recent content in Tags on Nothingness</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 25 Feb 2022 23:59:08 +0000</lastBuildDate><atom:link href="http://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 25 Feb 2022 23:59:08 +0000</lastBuildDate><atom:link href="http://cyfz11.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>生活水文</title>
-      <link>http://example.org/tags/%E7%94%9F%E6%B4%BB%E6%B0%B4%E6%96%87/</link>
+      <link>http://cyfz11.com/tags/%E7%94%9F%E6%B4%BB%E6%B0%B4%E6%96%87/</link>
       <pubDate>Fri, 25 Feb 2022 23:59:08 +0000</pubDate>
       
-      <guid>http://example.org/tags/%E7%94%9F%E6%B4%BB%E6%B0%B4%E6%96%87/</guid>
+      <guid>http://cyfz11.com/tags/%E7%94%9F%E6%B4%BB%E6%B0%B4%E6%96%87/</guid>
       <description></description>
     </item>
     
     <item>
       <title>course notes</title>
-      <link>http://example.org/tags/course-notes/</link>
+      <link>http://cyfz11.com/tags/course-notes/</link>
       <pubDate>Sun, 22 Mar 2020 20:30:00 +0000</pubDate>
       
-      <guid>http://example.org/tags/course-notes/</guid>
+      <guid>http://cyfz11.com/tags/course-notes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>recommender systems</title>
-      <link>http://example.org/tags/recommender-systems/</link>
+      <link>http://cyfz11.com/tags/recommender-systems/</link>
       <pubDate>Sun, 22 Mar 2020 20:30:00 +0000</pubDate>
       
-      <guid>http://example.org/tags/recommender-systems/</guid>
+      <guid>http://cyfz11.com/tags/recommender-systems/</guid>
       <description></description>
     </item>
     
     <item>
       <title>data analytics</title>
-      <link>http://example.org/tags/data-analytics/</link>
+      <link>http://cyfz11.com/tags/data-analytics/</link>
       <pubDate>Sun, 22 Mar 2020 15:23:00 +0000</pubDate>
       
-      <guid>http://example.org/tags/data-analytics/</guid>
+      <guid>http://cyfz11.com/tags/data-analytics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>course projects</title>
-      <link>http://example.org/tags/course-projects/</link>
+      <link>http://cyfz11.com/tags/course-projects/</link>
       <pubDate>Wed, 16 Oct 2019 15:54:34 +0000</pubDate>
       
-      <guid>http://example.org/tags/course-projects/</guid>
+      <guid>http://cyfz11.com/tags/course-projects/</guid>
       <description></description>
     </item>
     
     <item>
       <title>deep learning</title>
-      <link>http://example.org/tags/deep-learning/</link>
+      <link>http://cyfz11.com/tags/deep-learning/</link>
       <pubDate>Wed, 16 Oct 2019 15:54:34 +0000</pubDate>
       
-      <guid>http://example.org/tags/deep-learning/</guid>
+      <guid>http://cyfz11.com/tags/deep-learning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>natural language processing</title>
-      <link>http://example.org/tags/natural-language-processing/</link>
+      <link>http://cyfz11.com/tags/natural-language-processing/</link>
       <pubDate>Tue, 01 Oct 2019 16:03:58 +0000</pubDate>
       
-      <guid>http://example.org/tags/natural-language-processing/</guid>
+      <guid>http://cyfz11.com/tags/natural-language-processing/</guid>
       <description></description>
     </item>
     
     <item>
       <title>interview</title>
-      <link>http://example.org/tags/interview/</link>
+      <link>http://cyfz11.com/tags/interview/</link>
       <pubDate>Wed, 17 Apr 2019 18:14:56 +0000</pubDate>
       
-      <guid>http://example.org/tags/interview/</guid>
+      <guid>http://cyfz11.com/tags/interview/</guid>
       <description></description>
     </item>
     
     <item>
       <title>product manager</title>
-      <link>http://example.org/tags/product-manager/</link>
+      <link>http://cyfz11.com/tags/product-manager/</link>
       <pubDate>Wed, 17 Apr 2019 18:14:56 +0000</pubDate>
       
-      <guid>http://example.org/tags/product-manager/</guid>
+      <guid>http://cyfz11.com/tags/product-manager/</guid>
       <description></description>
     </item>
     
     <item>
       <title>reading notes</title>
-      <link>http://example.org/tags/reading-notes/</link>
+      <link>http://cyfz11.com/tags/reading-notes/</link>
       <pubDate>Wed, 17 Apr 2019 18:14:56 +0000</pubDate>
       
-      <guid>http://example.org/tags/reading-notes/</guid>
+      <guid>http://cyfz11.com/tags/reading-notes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>A/B testing</title>
-      <link>http://example.org/tags/a/b-testing/</link>
+      <link>http://cyfz11.com/tags/a/b-testing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/tags/a/b-testing/</guid>
+      <guid>http://cyfz11.com/tags/a/b-testing/</guid>
       <description></description>
     </item>
     

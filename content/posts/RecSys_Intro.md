@@ -11,7 +11,7 @@ tags:
 
 _Course note: overview of Recommender systems_
 
-<!-- more -->
+<!--more-->
 
 ---
 

@@ -1,37 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>cracking the PM interview on Nothing</title>
-    <link>http://example.org/categories/cracking-the-pm-interview/</link>
-    <description>Recent content in cracking the PM interview on Nothing</description>
+    <title>cracking the PM interview on Nothingness</title>
+    <link>http://cyfz11.com/categories/cracking-the-pm-interview/</link>
+    <description>Recent content in cracking the PM interview on Nothingness</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 17 Apr 2019 18:14:56 +0000</lastBuildDate><atom:link href="http://example.org/categories/cracking-the-pm-interview/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 17 Apr 2019 18:14:56 +0000</lastBuildDate><atom:link href="http://cyfz11.com/categories/cracking-the-pm-interview/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Chapter 7 Resumes</title>
-      <link>http://example.org/posts/chapter-7-resumes/</link>
+      <link>http://cyfz11.com/posts/chapter-7-resumes/</link>
       <pubDate>Wed, 17 Apr 2019 18:14:56 +0000</pubDate>
       
-      <guid>http://example.org/posts/chapter-7-resumes/</guid>
-      <description>This article is the reading notes of chapter2 of &amp;ldquo;cracking the PM interview&amp;rdquo;.
- This chapter is about resume.
-This chapter can be read with next chapter.
-本章讲了resume改如何写,写什么,并且专门说明了pm的resume该怎么写,还有每个东西可以在简历上停留多久(in &amp;ldquo;what to include&amp;rdquo;)。
-The 15 Second Rule   Rule #1: Shorter is Better
-You might have to be more concise, but that’s a good thing. This means that you’re sticking to the highlights.
-  Rule #2: Bullets, Not Blobs
-Blobs of text—that is, bullets or paragraphs that are three lines or longer—tend to not be read.</description>
+      <guid>http://cyfz11.com/posts/chapter-7-resumes/</guid>
+      <description>&lt;p&gt;This article is the reading notes of chapter2 of &amp;ldquo;cracking the PM interview&amp;rdquo;.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Chapter 2 The Product Manager Role</title>
-      <link>http://example.org/posts/chapter-2_the-product-manager-role/</link>
+      <link>http://cyfz11.com/posts/chapter-2_the-product-manager-role/</link>
       <pubDate>Wed, 06 Feb 2019 16:14:56 +0000</pubDate>
       
-      <guid>http://example.org/posts/chapter-2_the-product-manager-role/</guid>
-      <description>This article is the reading notes of chapter2 of &amp;ldquo;cracking the PM interview&amp;rdquo;.
- This chapter is about the PM: what is PM, their functions and difference with other roles.
-What is a PM?  Some people will say that the product manager (sometimes called the program manager or project manager) is like a mini-CEO of their product. That’s accurate in some ways, since a PM takes holistic responsibility for the product, from the little details to the big picture.</description>
+      <guid>http://cyfz11.com/posts/chapter-2_the-product-manager-role/</guid>
+      <description>&lt;p&gt;This article is the reading notes of chapter2 of &amp;ldquo;cracking the PM interview&amp;rdquo;.&lt;/p&gt;</description>
     </item>
     
   </channel>

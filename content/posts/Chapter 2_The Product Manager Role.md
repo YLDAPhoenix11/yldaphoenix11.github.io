@@ -12,7 +12,7 @@ tags:
 
 This article is the reading notes of chapter2 of "cracking the PM interview".
 
-<!-- more -->
+<!--more-->
 
 ------
 

@@ -4,16 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Sentiment Analysis | Nothing</title>
+    <title>Sentiment Analysis | Nothingness</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="Taking some notes after I watched Stanford Coursera course &ldquo;Sentiment Analysis&rdquo; by Dan Jurafsky and Christopher Manning.
- Introduction Sentiment Analysis, 也叫 opinion extraction/opinion mining/sentiment mining/subjectivity analysis，中文译作情感分析/文本情感分析，是自然语言处理 (Natural Language Processing) 的应用之一。
-根据Wiki
- 文本情感分析（也称为意见挖掘）是指用自然语言处理、文本挖掘以及计算机语言学等方法来识别和提取原素材中的主观信息。
- 注意这里说的是主观信息，并没有用简单的情感一词代替，这是因为sentiment analysis并不仅仅是抽取出情感。事实上，sentiment这个词虽然可以翻译为情感，有一个释义也是&quot;emotion&quot;，但是也有一个释义是 &ldquo;an attitude, thought, or judgment prompted by feeling&rdquo; (By Merriam-webster)，与opinion同义。因此sentiment analysis的sentiment不能单做为emotion看待。在本课中，Dan认为sentiment是attitude的子集，强调的主要是attitude.
-Tasks 要分析出sentiment，也就是要知道以下几个：
- Source，是谁的sentiment Target，对什么的sentiment what/type，什么样的的sentiment 除此之外，也需要知道包含sentiment的文本  根据难度的不同，可以将sentiment analysis 分成以下task:
- Easy模式：Polarity detection，判断positive/negative Medium模式：在判断的基础上为attitude给出强弱 Hard模式：判断target/source，以及更加复杂的attitude  Some projects   Google - Twitter Sentiment Analysis">
+    <meta name="description" content="Taking some notes after I watched Stanford Coursera course &ldquo;Sentiment Analysis&rdquo; by Dan Jurafsky and Christopher Manning.">
     <meta name="generator" content="Hugo 0.92.2" />
     
     
@@ -37,40 +30,19 @@ Tasks 要分析出sentiment，也就是要知道以下几个：
     
     
     <meta property="og:title" content="Sentiment Analysis" />
-<meta property="og:description" content="Taking some notes after I watched Stanford Coursera course &ldquo;Sentiment Analysis&rdquo; by Dan Jurafsky and Christopher Manning.
- Introduction Sentiment Analysis, 也叫 opinion extraction/opinion mining/sentiment mining/subjectivity analysis，中文译作情感分析/文本情感分析，是自然语言处理 (Natural Language Processing) 的应用之一。
-根据Wiki
- 文本情感分析（也称为意见挖掘）是指用自然语言处理、文本挖掘以及计算机语言学等方法来识别和提取原素材中的主观信息。
- 注意这里说的是主观信息，并没有用简单的情感一词代替，这是因为sentiment analysis并不仅仅是抽取出情感。事实上，sentiment这个词虽然可以翻译为情感，有一个释义也是&quot;emotion&quot;，但是也有一个释义是 &ldquo;an attitude, thought, or judgment prompted by feeling&rdquo; (By Merriam-webster)，与opinion同义。因此sentiment analysis的sentiment不能单做为emotion看待。在本课中，Dan认为sentiment是attitude的子集，强调的主要是attitude.
-Tasks 要分析出sentiment，也就是要知道以下几个：
- Source，是谁的sentiment Target，对什么的sentiment what/type，什么样的的sentiment 除此之外，也需要知道包含sentiment的文本  根据难度的不同，可以将sentiment analysis 分成以下task:
- Easy模式：Polarity detection，判断positive/negative Medium模式：在判断的基础上为attitude给出强弱 Hard模式：判断target/source，以及更加复杂的attitude  Some projects   Google - Twitter Sentiment Analysis" />
+<meta property="og:description" content="Taking some notes after I watched Stanford Coursera course &ldquo;Sentiment Analysis&rdquo; by Dan Jurafsky and Christopher Manning." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://example.org/posts/sentiment-analysis/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="http://cyfz11.com/posts/sentiment-analysis/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2019-10-01T16:03:58+00:00" />
 <meta property="article:modified_time" content="2019-10-01T16:03:58+00:00" />
 
 <meta itemprop="name" content="Sentiment Analysis">
-<meta itemprop="description" content="Taking some notes after I watched Stanford Coursera course &ldquo;Sentiment Analysis&rdquo; by Dan Jurafsky and Christopher Manning.
- Introduction Sentiment Analysis, 也叫 opinion extraction/opinion mining/sentiment mining/subjectivity analysis，中文译作情感分析/文本情感分析，是自然语言处理 (Natural Language Processing) 的应用之一。
-根据Wiki
- 文本情感分析（也称为意见挖掘）是指用自然语言处理、文本挖掘以及计算机语言学等方法来识别和提取原素材中的主观信息。
- 注意这里说的是主观信息，并没有用简单的情感一词代替，这是因为sentiment analysis并不仅仅是抽取出情感。事实上，sentiment这个词虽然可以翻译为情感，有一个释义也是&quot;emotion&quot;，但是也有一个释义是 &ldquo;an attitude, thought, or judgment prompted by feeling&rdquo; (By Merriam-webster)，与opinion同义。因此sentiment analysis的sentiment不能单做为emotion看待。在本课中，Dan认为sentiment是attitude的子集，强调的主要是attitude.
-Tasks 要分析出sentiment，也就是要知道以下几个：
- Source，是谁的sentiment Target，对什么的sentiment what/type，什么样的的sentiment 除此之外，也需要知道包含sentiment的文本  根据难度的不同，可以将sentiment analysis 分成以下task:
- Easy模式：Polarity detection，判断positive/negative Medium模式：在判断的基础上为attitude给出强弱 Hard模式：判断target/source，以及更加复杂的attitude  Some projects   Google - Twitter Sentiment Analysis"><meta itemprop="datePublished" content="2019-10-01T16:03:58+00:00" />
+<meta itemprop="description" content="Taking some notes after I watched Stanford Coursera course &ldquo;Sentiment Analysis&rdquo; by Dan Jurafsky and Christopher Manning."><meta itemprop="datePublished" content="2019-10-01T16:03:58+00:00" />
 <meta itemprop="dateModified" content="2019-10-01T16:03:58+00:00" />
 <meta itemprop="wordCount" content="165">
 <meta itemprop="keywords" content="course notes,natural language processing," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Sentiment Analysis"/>
-<meta name="twitter:description" content="Taking some notes after I watched Stanford Coursera course &ldquo;Sentiment Analysis&rdquo; by Dan Jurafsky and Christopher Manning.
- Introduction Sentiment Analysis, 也叫 opinion extraction/opinion mining/sentiment mining/subjectivity analysis，中文译作情感分析/文本情感分析，是自然语言处理 (Natural Language Processing) 的应用之一。
-根据Wiki
- 文本情感分析（也称为意见挖掘）是指用自然语言处理、文本挖掘以及计算机语言学等方法来识别和提取原素材中的主观信息。
- 注意这里说的是主观信息，并没有用简单的情感一词代替，这是因为sentiment analysis并不仅仅是抽取出情感。事实上，sentiment这个词虽然可以翻译为情感，有一个释义也是&quot;emotion&quot;，但是也有一个释义是 &ldquo;an attitude, thought, or judgment prompted by feeling&rdquo; (By Merriam-webster)，与opinion同义。因此sentiment analysis的sentiment不能单做为emotion看待。在本课中，Dan认为sentiment是attitude的子集，强调的主要是attitude.
-Tasks 要分析出sentiment，也就是要知道以下几个：
- Source，是谁的sentiment Target，对什么的sentiment what/type，什么样的的sentiment 除此之外，也需要知道包含sentiment的文本  根据难度的不同，可以将sentiment analysis 分成以下task:
- Easy模式：Polarity detection，判断positive/negative Medium模式：在判断的基础上为attitude给出强弱 Hard模式：判断target/source，以及更加复杂的attitude  Some projects   Google - Twitter Sentiment Analysis"/>
+<meta name="twitter:description" content="Taking some notes after I watched Stanford Coursera course &ldquo;Sentiment Analysis&rdquo; by Dan Jurafsky and Christopher Manning."/>
 
 	
   </head>
@@ -87,7 +59,7 @@ Tasks 要分析出sentiment，也就是要知道以下几个：
   <div class="flex-l justify-between items-center center">
     <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
       
-        Nothing
+        Nothingness
       
     </a>
     <div class="flex-l items-center">
@@ -143,7 +115,6 @@ Tasks 要分析出sentiment，也就是要知道以下几个：
       
     </header>
     <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>Taking some notes after I watched <a href="http://web.stanford.edu/~jurafsky/NLPCourseraSlides.html">Stanford Coursera course</a> &ldquo;Sentiment Analysis&rdquo; by <a href="http://www.stanford.edu/people/jurafsky">Dan Jurafsky</a> and <a href="http://nlp.stanford.edu/manning/">Christopher Manning</a>.</p>
-<!-- raw HTML omitted -->
 <hr>
 <h1 id="introduction">Introduction</h1>
 <p>Sentiment Analysis, 也叫 opinion extraction/opinion mining/sentiment mining/subjectivity analysis，中文译作情感分析/文本情感分析，是自然语言处理 (Natural Language Processing) 的应用之一。</p>
@@ -230,8 +201,7 @@ Tasks 要分析出sentiment，也就是要知道以下几个：
 <p><strong>Use WordNet to learn Polarity</strong></p>
 <p>基本思想是用WordNet的同义词/近义词/反义词等来学习。</p>
 </li>
-</ol>
-<ul class="pa0">
+</ol><ul class="pa0">
   
    <li class="list di">
      <a href="/tags/course-notes" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">course notes</a>
@@ -271,8 +241,8 @@ Tasks 要分析出sentiment，也就是要知道以下几个：
     </main>
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://example.org/" >
-    &copy;  Nothing 2022 
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://cyfz11.com/" >
+    &copy;  Nothingness 2022 
   </a>
     <div>
 <div class="ananke-socials">

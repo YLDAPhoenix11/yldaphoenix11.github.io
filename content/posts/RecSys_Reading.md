@@ -11,7 +11,7 @@ tags:
 
 _Course note: Reading of Recommender systems_
 
-<!-- more -->
+<!--more-->
 
 ---
 

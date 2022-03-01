@@ -10,7 +10,7 @@ tags:
 
 Taking some notes after I watched [Stanford Coursera course](http://web.stanford.edu/~jurafsky/NLPCourseraSlides.html) "Sentiment Analysis" by [Dan Jurafsky](http://www.stanford.edu/people/jurafsky) and [Christopher Manning](http://nlp.stanford.edu/manning/).
 
-<!-- more -->
+<!--more-->
 
 ------
 

@@ -1,5 +1,5 @@
-baseURL = 'http://example.org/'
+baseURL = 'http://cyfz11.com/'
 languageCode = 'en-us'
-title = 'Nothing'
+title = 'Nothingness'
 publishDir = "docs"
 theme = "ananke"

@@ -12,7 +12,7 @@ tags:
 
 _Course note of [A/B testing on Udacity](https://www.udacity.com/course/ab-testing--ud257): Lesson 3_
 
-<!-- more -->
+<!--more-->
 
 ---
 
