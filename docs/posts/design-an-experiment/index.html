@@ -1,175 +1,50 @@
 <!DOCTYPE html>
-<html lang="en-us">
-    <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Course note of A/B testing on Udacity: Lesson 4
-'><title>Design an Experiment</title>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Design an Experiment - Nothingness</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
 
-<link rel='canonical' href='http://cyfz11.com/posts/design-an-experiment/'>
+	<link rel="stylesheet" href="/css/style.css">
+	
 
-<link rel="stylesheet" href="/scss/style.min.1b167e2cb0123f4ab756c1f7b38280839833cb553987f96fa7aaeacb7f4f71de.css"><meta property='og:title' content='Design an Experiment'>
-<meta property='og:description' content='Course note of A/B testing on Udacity: Lesson 4
-'>
-<meta property='og:url' content='http://cyfz11.com/posts/design-an-experiment/'>
-<meta property='og:site_name' content='Nothingness'>
-<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='course notes' /><meta property='article:tag' content='data analytics' /><meta property='article:tag' content='A/B testing' /><meta property='article:published_time' content='2020-03-22T15:18:00&#43;00:00'/><meta property='article:modified_time' content='2020-03-22T15:18:00&#43;00:00'/>
-<meta name="twitter:title" content="Design an Experiment">
-<meta name="twitter:description" content="Course note of A/B testing on Udacity: Lesson 4
-">
-    </head>
-    <body class="
-    article-page
-    ">
-    <script>
-        (function() {
-            const colorSchemeKey = 'StackColorScheme';
-            if(!localStorage.getItem(colorSchemeKey)){
-                localStorage.setItem(colorSchemeKey, "auto");
-            }
-        })();
-    </script><script>
-    (function() {
-        const colorSchemeKey = 'StackColorScheme';
-        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
-        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
-
-        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
-            
-
-            document.documentElement.dataset.scheme = 'dark';
-        } else {
-            document.documentElement.dataset.scheme = 'light';
-        }
-    })();
-</script>
-<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky">
-    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
-        <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-        </span>
-    </button>
-
-    <header class="site-info">
-        
-            
-            <figure class="site-avatar">
-                <a href="/">
-                
-                    
-                    
-                    
-                        
-                        <img src="/img/avatar_huda2458f72ce188392d75c5d51cd8e24e_373_300x0_resize_box_3.png" width="300"
-                            height="300" class="site-logo" loading="lazy" alt="Avatar">
-                    
-                
-                </a>
-                
-            </figure>
-            
-        
-        
-        <h1 class="site-name"><a href="/">Nothingness</a></h1>
-        <h2 class="site-description"></h2></header>
-
-    <ol class="menu" id="main-menu">
-        
-        
-
-        <div class="menu-bottom-section">
-            
-            
-                <li id="dark-mode-toggle">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="8" cy="12" r="2" />
-  <rect x="2" y="6" width="20" height="12" rx="6" />
-</svg>
-
-
-
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="16" cy="12" r="2" />
-  <rect x="2" y="6" width="20" height="12" rx="6" />
-</svg>
-
-
-
-                    <span>Dark Mode</span>
-                </li>
-            
-        </div>
-    </ol>
-</aside>
-<main class="main full-width">
-    <article class="main-article">
-    <header class="article-header">
-
-    <div class="article-details">
-    
-    <header class="article-category">
-        
-            <a href="/categories/course-notes/" >
-                course notes
-            </a>
-        
-            <a href="/categories/data-analytics/" >
-                data analytics
-            </a>
-        
-    </header>
-    
-
-    <h2 class="article-title">
-        <a href="/posts/design-an-experiment/">Design an Experiment</a>
-    </h2>
-
-    
-
-    
-    <footer class="article-time">
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
-  <circle cx="18" cy="18" r="4" />
-  <path d="M15 3v4" />
-  <path d="M7 3v4" />
-  <path d="M3 11h16" />
-  <path d="M18 16.496v1.504l1 1" />
-</svg>
-                <time class="article-time--published">Mar 22, 2020</time>
-            </div>
-        
-
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-                <time class="article-time--reading">
-                    5 minute read
-                </time>
-            </div>
-        
-    </footer>
-    
-
-    
-</div>
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="Nothingness" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">Nothingness</div>
+					
+				</div>
+		</a>
+	</div>
+		<div class="divider"></div>
+	</div>
 </header>
-
-    <section class="article-content">
-    
-    
-    <p><em>Course note of <a class="link" href="https://www.udacity.com/course/ab-testing--ud257"  target="_blank" rel="noopener"
-    >A/B testing on Udacity</a>: Lesson 4</em></p>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Design an Experiment</h1>
+			
+		</header>
+		<div class="content post__content clearfix">
+			<p><em>Course note of <a href="https://www.udacity.com/course/ab-testing--ud257">A/B testing on Udacity</a>: Lesson 4</em></p>
 <hr>
 <p>#Design an Experiment</p>
 <h2 id="choose-subject">Choose &ldquo;subject&rdquo;</h2>
@@ -227,14 +102,7 @@
 <li>
 <p>**Quiz: **</p>
 <p>When would the user be switched to another group in experiement? (When the unit of diversion will change? )</p>
-<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbh190hlrej31iw0u0npd.jpg"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbh190hlrej31iw0u0npd.jpg" alt=""></p>
 <p>User-id: only valid when signing in</p>
 <p>Cookie: do not change if users do not clear cookies through these events, otherwise it would change (so some are &ldquo;?&quot;)</p>
 <p>Event: change among every events</p>
@@ -250,14 +118,7 @@
 <li>
 <p>Quiz:</p>
 <p>Choose event when event is enough; choose cookie when event is not good and cookie is enough; choose user-id when event and cookie are not enough for experiment</p>
-<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbh2h85pm6j31h30u0u0x.jpg"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbh2h85pm6j31h30u0u0x.jpg" alt=""></p>
 <p>Events: for the changes that users will not notice</p>
 <p>Cookie: it iwll be very strange if the button size and color change when user reload the pages.</p>
 <p>User-id: when cross device consistency is important</p>
@@ -268,35 +129,14 @@
 <li>User-id is identified, so using user-id must be careful.</li>
 <li>Informed consent</li>
 </ol>
-<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbh2ufice0j31lt0u01ky.jpg"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbh2ufice0j31lt0u01ky.jpg" alt=""></p>
 <p>1st: when user log in, they have already submit their email and may have already approved that their data can be collected.</p>
 <p>2nd: if emails are collected by cookies, then it will need inform user.</p>
 <h5 id="3-variability">3. variability</h5>
 <p>empirically/analytically computed varaibility</p>
 <p>Sometimes empirically will be higher than analytically because unit of analysis is different from unit of diversion (unit of analysis: the denominator of metrics. For example, pageviews in CTR (clicks/pageviews)) is unit of analysis. If unit of diversion is pageviews, empirically $\approx$ analytically. If unit of diversion is cookie/user-id, varaibility will be higher, so it is better to use empirically given unit of diversion.  - why: when compute analytically, make assumption on distribution of data and indenpendence</p>
-<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbhvu15fjaj31hp0u0npd.jpg"
-	
-	
-	
-	loading="lazy"
-	
-	
->In the example above, metric is coverage and unit of analysis is query. If use cookie as unit of diversion, the standard error will be higher than that with query as unit of diversion.</p>
-<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbhvs6dzpsj31jt0u04qq.jpg"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbhvu15fjaj31hp0u0npd.jpg" alt="">In the example above, metric is coverage and unit of analysis is query. If use cookie as unit of diversion, the standard error will be higher than that with query as unit of diversion.</p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbhvs6dzpsj31jt0u04qq.jpg" alt=""></p>
 <p>1st: unit of analysis: pageviews; unit of diversion: cookie; unit of analysis (event) is &ldquo;larger&rdquo; than unit of diversion(cookie). All pageviews of one cookie will belong to one group.</p>
 <p>2nd: unit of analysis: cookie; unit of diversion: pageview; unit of diversion (pageview) is too fine-grained. That is, one cookie may have multiple pageviews. So, 2 pageviews of one cookie may belong to different groups.</p>
 <p>3rd: two units are consistent.</p>
@@ -307,72 +147,23 @@
 <h3 id="target-population">Target Population</h3>
 <p>restrict the population by geo, language, browser; Also good for run multiple testing (not overlap) in company;</p>
 <p>In the example below, practical significance d_min is not given. So, we just use statistical significance as 0.</p>
-<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbi6ft0vhyj31kr0u0x6p.jpg"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbi6hnsfmaj31e30u01ky.jpg"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbi6ft0vhyj31kr0u0x6p.jpg" alt=""></p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbi6hnsfmaj31e30u01ky.jpg" alt=""></p>
 <p>For global, must add all data from New Zealand and data from Other. d_hat-m&lt;0, so it is not significant.</p>
 <p>The difference between these two results is due to the difference of d_hat.</p>
 <h3 id="population-vs-cohort">Population vs. Cohort</h3>
 <p>For population, people may exit the experiment, or maybe their IP address can change in experiment. For cohort based on time, it is just people who enter the experiment as the same time. It is harder to analyze since it lose data. Typically, only use cohort when we need user to be stable and established.</p>
-<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbi6x18obuj31mm0qe4oc.jpg"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbi6xgkrq0j31ht0u0hdt.jpg"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbi6x18obuj31mm0qe4oc.jpg" alt=""></p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbi6xgkrq0j31ht0u0hdt.jpg" alt=""></p>
 <h2 id="size">Size</h2>
 <p><strong>In lesson 1, size based on practical significance, statistical significance and sensitivity.</strong></p>
 <p>Choice of metric/unit of diversion/population will influence variability, and variability will change size.</p>
-<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbj1ibkjyuj31ed0u0hdt.jpg"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbj1igwbhtj31hi0u04qp.jpg"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbj1ibkjyuj31ed0u0hdt.jpg" alt=""></p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbj1igwbhtj31hi0u04qp.jpg" alt=""></p>
 <ul>
 <li>
 <p>Quiz:</p>
-<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbj203v6s1j31kf0u04qq.jpg"
-	
-	
-	
-	loading="lazy"
-	
-	
->1st: Change the unit of diversion to the unit of analysis will decrese the variability (also, SE).</p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbj203v6s1j31kf0u04qq.jpg" alt="">1st: Change the unit of diversion to the unit of analysis will decrese the variability (also, SE).</p>
 <p>2nd: Other traffic will dilute the results and increase the variability.</p>
 <p>3rd: often it doesn&rsquo;t make significant difference. But if there is a difference, varaibility would probably go down because unit of analysis and unit od diversion are same.</p>
 </li>
@@ -392,240 +183,50 @@
 <li>what fraction of traffic are going to use? - given size, less proportion lead to a longer duration.</li>
 </ol>
 <p>Why not run on all traffic: safety. press. run on multiple days for weekdays and weekends/ holidays and normal days. run multiple experiments and tasks.</p>
-<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbjbbzyzphj31gd0u07wh.jpg"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbjbc8dh83j31j40u0u0x.jpg"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbjbbzyzphj31gd0u07wh.jpg" alt=""></p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbjbc8dh83j31j40u0u0x.jpg" alt=""></p>
 <p>Risky: may cause big problem if the result is not good enough.</p>
 <p>**Learning effect: **</p>
 <p>Some users do not like new changes, while other users are excited to see new changes.</p>
 <p>Measure user learning:</p>
 <p>If there is learning effect, there won&rsquo;t be a big change right from beginning but increasing over time.</p>
-</section>
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/course-notes/" rel="tag">course notes</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/data-analytics/" rel="tag">data analytics</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/a/b-testing/" rel="tag">A/B testing</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
 
 
-    <footer class="article-footer">
-    
-    <section class="article-tags">
-        
-            <a href="/tags/course-notes/">course notes</a>
-        
-            <a href="/tags/data-analytics/">data analytics</a>
-        
-            <a href="/tags/a/b-testing/">A/B testing</a>
-        
-    </section>
 
 
-    </footer>
-
-
-    
-</article>
-
-    
-
-    <aside class="related-contents--wrapper">
-    
-    
-        <h2 class="section-title">Related contents</h2>
-        <div class="related-contents">
-            <div class="flex article-list--tile">
-                
-                    
-<article class="">
-    <a href="/posts/choosing-and-characterizing-metrics/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Choosing and Characterizing metrics</h2>
-        </div>
-    </a>
-</article>
-                
-                    
-<article class="">
-    <a href="/posts/policy-and-ethics-for-experiments/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Policy and Ethics for Experiments</h2>
-        </div>
-    </a>
-</article>
-                
-                    
-<article class="">
-    <a href="/posts/overview-of-ab-testing/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Overview of A/B Testing</h2>
-        </div>
-    </a>
-</article>
-                
-                    
-<article class="">
-    <a href="/posts/sentiment-analysis/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Sentiment Analysis</h2>
-        </div>
-    </a>
-</article>
-                
-                    
-<article class="">
-    <a href="/posts/recsys_intro/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">RecSys Intro</h2>
-        </div>
-    </a>
-</article>
-                
-            </div>
-        </div>
-    
-</aside>
-
-     
-    
-        
-    
-
-    <footer class="site-footer">
-    <section class="copyright">
-        &copy; 
-        
-        2022 Nothingness
-    </section>
-    
-    <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.8.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
-    </section>
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2022 Nothingness.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
 </footer>
-
-
-    
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-    
-    <div class="pswp__bg"></div>
-
-    
-    <div class="pswp__scroll-wrap">
-
-        
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-
-        
-        <div class="pswp__ui pswp__ui--hidden">
-
-            <div class="pswp__top-bar">
-
-                
-
-                <div class="pswp__counter"></div>
-
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                <button class="pswp__button pswp__button--share" title="Share"></button>
-
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                
-                
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                        <div class="pswp__preloader__cut">
-                            <div class="pswp__preloader__donut"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div>
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-
-        </div>
-
-    </div>
-
-</div><script 
-                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
-                defer
-                >
-            </script><script 
-                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
-                defer
-                >
-            </script><link 
-                rel="stylesheet" 
-                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
-            ><link 
-                rel="stylesheet" 
-                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
-            >
-
-            </main>
-    
-
-        </div>
-        <script 
-                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
-                
-                >
-            </script><script type="text/javascript" src="/ts/main.js" defer></script>
-<script>
-    (function () {
-        const customFont = document.createElement('link');
-        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
-
-        customFont.type = "text/css";
-        customFont.rel = "stylesheet";
-
-        document.head.appendChild(customFont);
-    }());
-</script>
-
-    </body>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
 </html>

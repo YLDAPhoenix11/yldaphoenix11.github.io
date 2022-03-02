@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Course note of A/B testing on Udacity: Lesson 4
+'><title>Design an Experiment</title>
+
+<link rel='canonical' href='https://example.com/posts/design-an-experiment/'>
+
+<link rel="stylesheet" href="/scss/style.min.1b167e2cb0123f4ab756c1f7b38280839833cb553987f96fa7aaeacb7f4f71de.css"><meta property='og:title' content='Design an Experiment'>
+<meta property='og:description' content='Course note of A/B testing on Udacity: Lesson 4
+'>
+<meta property='og:url' content='https://example.com/posts/design-an-experiment/'>
+<meta property='og:site_name' content='Example Site'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='course notes' /><meta property='article:tag' content='data analytics' /><meta property='article:tag' content='A/B testing' /><meta property='article:published_time' content='2020-03-22T15:18:00&#43;00:00'/><meta property='article:modified_time' content='2020-03-22T15:18:00&#43;00:00'/>
+<meta name="twitter:title" content="Design an Experiment">
+<meta name="twitter:description" content="Course note of A/B testing on Udacity: Lesson 4
+">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_huda2458f72ce188392d75c5d51cd8e24e_373_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <h1 class="site-name"><a href="/">Example Site</a></h1>
+        <h2 class="site-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2><ol class="social-menu">
+                
+                    <li>
+                        <a 
+                            href='https://github.com/CaiJimmy/hugo-theme-stack'
+                            target="_blank"
+                            title="GitHub"
+                        >
+                            
+                            
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a 
+                            href='https://twitter.com'
+                            target="_blank"
+                            title="Twitter"
+                        >
+                            
+                            
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                            
+                        </a>
+                    </li>
+                
+            </ol></header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' target="_blank">
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+                <li id="i18n-switch">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                        
+                            <option value="https://example.com/" selected>English</option>
+                        
+                            <option value="https://example.com/cn/" >中文</option>
+                        
+                    </select>
+                </li>
+            
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/course-notes/" >
+                course notes
+            </a>
+        
+            <a href="/categories/data-analytics/" >
+                data analytics
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/posts/design-an-experiment/">Design an Experiment</a>
+    </h2>
+
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 22, 2020</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    5 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <p><em>Course note of <a class="link" href="https://www.udacity.com/course/ab-testing--ud257"  target="_blank" rel="noopener"
+    >A/B testing on Udacity</a>: Lesson 4</em></p>
+<hr>
+<p>#Design an Experiment</p>
+<h2 id="choose-subject">Choose &ldquo;subject&rdquo;</h2>
+<h3 id="unit-of-diversion">Unit of diversion</h3>
+<p><strong>What an individual subject is in the experiment.</strong></p>
+<h4 id="unit-of-diversion-examples">Unit of diversion examples:</h4>
+<ul>
+<li>
+<p><strong>commonly used:</strong></p>
+<ul>
+<li>
+<p>user id</p>
+<ul>
+<li>
+<p>stable, unchanging</p>
+</li>
+<li>
+<p>personally identifiable</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Anonymous id (cookie)</p>
+<ul>
+<li>changes when switching browser or device</li>
+<li>users can clear cookies</li>
+</ul>
+</li>
+<li>
+<p>Event</p>
+<ul>
+<li>no consistent experience</li>
+<li>use only for non-user-visible changes</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>less common:</strong></p>
+<ul>
+<li>Device id
+<ul>
+<li>only available for <strong>mobile</strong> (so here the device id is just for mobile)</li>
+<li>tied to specific device</li>
+<li>unchangeable by user</li>
+</ul>
+</li>
+<li>IP address
+<ul>
+<li>changes when location changes</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>**Quiz: **</p>
+<p>When would the user be switched to another group in experiement? (When the unit of diversion will change? )</p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbh190hlrej31iw0u0npd.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>User-id: only valid when signing in</p>
+<p>Cookie: do not change if users do not clear cookies through these events, otherwise it would change (so some are &ldquo;?&quot;)</p>
+<p>Event: change among every events</p>
+<p>Device id: only valid for mobile</p>
+<p>IP address: (hard to tell whether it changes in &ldquo;?&rdquo; )</p>
+</li>
+</ul>
+<h5 id="1-consistency-of-diversions">1. Consistency of Diversions</h5>
+<ul>
+<li>
+<p>user consistency</p>
+</li>
+<li>
+<p>Quiz:</p>
+<p>Choose event when event is enough; choose cookie when event is not good and cookie is enough; choose user-id when event and cookie are not enough for experiment</p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbh2h85pm6j31h30u0u0x.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>Events: for the changes that users will not notice</p>
+<p>Cookie: it iwll be very strange if the button size and color change when user reload the pages.</p>
+<p>User-id: when cross device consistency is important</p>
+</li>
+</ul>
+<h5 id="2-ethical-considerations-for-diversion">2. Ethical Considerations for Diversion</h5>
+<ol>
+<li>User-id is identified, so using user-id must be careful.</li>
+<li>Informed consent</li>
+</ol>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbh2ufice0j31lt0u01ky.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>1st: when user log in, they have already submit their email and may have already approved that their data can be collected.</p>
+<p>2nd: if emails are collected by cookies, then it will need inform user.</p>
+<h5 id="3-variability">3. variability</h5>
+<p>empirically/analytically computed varaibility</p>
+<p>Sometimes empirically will be higher than analytically because unit of analysis is different from unit of diversion (unit of analysis: the denominator of metrics. For example, pageviews in CTR (clicks/pageviews)) is unit of analysis. If unit of diversion is pageviews, empirically $\approx$ analytically. If unit of diversion is cookie/user-id, varaibility will be higher, so it is better to use empirically given unit of diversion.  - why: when compute analytically, make assumption on distribution of data and indenpendence</p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbhvu15fjaj31hp0u0npd.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+>In the example above, metric is coverage and unit of analysis is query. If use cookie as unit of diversion, the standard error will be higher than that with query as unit of diversion.</p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbhvs6dzpsj31jt0u04qq.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>1st: unit of analysis: pageviews; unit of diversion: cookie; unit of analysis (event) is &ldquo;larger&rdquo; than unit of diversion(cookie). All pageviews of one cookie will belong to one group.</p>
+<p>2nd: unit of analysis: cookie; unit of diversion: pageview; unit of diversion (pageview) is too fine-grained. That is, one cookie may have multiple pageviews. So, 2 pageviews of one cookie may belong to different groups.</p>
+<p>3rd: two units are consistent.</p>
+<h2 id="choose-population">Choose &ldquo;population&rdquo;</h2>
+<h3 id="inter-user-experiment-vs-intra-user-experiment">Inter-User experiment vs. Intra-User experiment</h3>
+<p>Inter-User experiment: A/B testing</p>
+<p>Intra-User experiment: show different things to same user in different time</p>
+<h3 id="target-population">Target Population</h3>
+<p>restrict the population by geo, language, browser; Also good for run multiple testing (not overlap) in company;</p>
+<p>In the example below, practical significance d_min is not given. So, we just use statistical significance as 0.</p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbi6ft0vhyj31kr0u0x6p.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbi6hnsfmaj31e30u01ky.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>For global, must add all data from New Zealand and data from Other. d_hat-m&lt;0, so it is not significant.</p>
+<p>The difference between these two results is due to the difference of d_hat.</p>
+<h3 id="population-vs-cohort">Population vs. Cohort</h3>
+<p>For population, people may exit the experiment, or maybe their IP address can change in experiment. For cohort based on time, it is just people who enter the experiment as the same time. It is harder to analyze since it lose data. Typically, only use cohort when we need user to be stable and established.</p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbi6x18obuj31mm0qe4oc.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbi6xgkrq0j31ht0u0hdt.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h2 id="size">Size</h2>
+<p><strong>In lesson 1, size based on practical significance, statistical significance and sensitivity.</strong></p>
+<p>Choice of metric/unit of diversion/population will influence variability, and variability will change size.</p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbj1ibkjyuj31ed0u0hdt.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbj1igwbhtj31hi0u04qp.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<ul>
+<li>
+<p>Quiz:</p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbj203v6s1j31kf0u04qq.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+>1st: Change the unit of diversion to the unit of analysis will decrese the variability (also, SE).</p>
+<p>2nd: Other traffic will dilute the results and increase the variability.</p>
+<p>3rd: often it doesn&rsquo;t make significant difference. But if there is a difference, varaibility would probably go down because unit of analysis and unit od diversion are same.</p>
+</li>
+<li>
+<p>Targeting the size to specific traffic will cause some problems:</p>
+<ol>
+<li>We do not know what results will this traffic lead to. It is hard to predict.</li>
+<li>Hard to detect impact.</li>
+</ol>
+<p>Therefore, run a pilot, turn on the experiemnt for a little to see who&rsquo;s affected, or just use the first day/week to get a better guess.</p>
+</li>
+</ul>
+<h2 id="duration">Duration</h2>
+<ol>
+<li>what duration?</li>
+<li>when to run the experiment?</li>
+<li>what fraction of traffic are going to use? - given size, less proportion lead to a longer duration.</li>
+</ol>
+<p>Why not run on all traffic: safety. press. run on multiple days for weekdays and weekends/ holidays and normal days. run multiple experiments and tasks.</p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbjbbzyzphj31gd0u07wh.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbjbc8dh83j31j40u0u0x.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>Risky: may cause big problem if the result is not good enough.</p>
+<p>**Learning effect: **</p>
+<p>Some users do not like new changes, while other users are excited to see new changes.</p>
+<p>Measure user learning:</p>
+<p>If there is learning effect, there won&rsquo;t be a big change right from beginning but increasing over time.</p>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/course-notes/">course notes</a>
+        
+            <a href="/tags/data-analytics/">data analytics</a>
+        
+            <a href="/tags/a/b-testing/">A/B testing</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">Related contents</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="">
+    <a href="/posts/final-project/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Final Project</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/posts/analyzing-results/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Analyzing Results</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/posts/choosing-and-characterizing-metrics/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Choosing and Characterizing metrics</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/posts/policy-and-ethics-for-experiments/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Policy and Ethics for Experiments</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/posts/overview-of-ab-testing/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Overview of A/B Testing</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (DISQUS) {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2022 Example Site
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.8.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#choose-subject">Choose &ldquo;subject&rdquo;</a>
+      <ol>
+        <li><a href="#unit-of-diversion">Unit of diversion</a>
+          <ol>
+            <li><a href="#unit-of-diversion-examples">Unit of diversion examples:</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#choose-population">Choose &ldquo;population&rdquo;</a>
+      <ol>
+        <li><a href="#inter-user-experiment-vs-intra-user-experiment">Inter-User experiment vs. Intra-User experiment</a></li>
+        <li><a href="#target-population">Target Population</a></li>
+        <li><a href="#population-vs-cohort">Population vs. Cohort</a></li>
+      </ol>
+    </li>
+    <li><a href="#size">Size</a></li>
+    <li><a href="#duration">Duration</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

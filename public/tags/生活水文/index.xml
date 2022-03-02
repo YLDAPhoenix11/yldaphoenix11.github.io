@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>生活水文 on Example Site</title>
+    <link>https://example.com/tags/%E7%94%9F%E6%B4%BB%E6%B0%B4%E6%96%87/</link>
+    <description>Recent content in 生活水文 on Example Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 25 Feb 2022 23:59:08 +0000</lastBuildDate><atom:link href="https://example.com/tags/%E7%94%9F%E6%B4%BB%E6%B0%B4%E6%96%87/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>我，深漂两年</title>
+      <link>https://example.com/posts/%E6%88%91%E6%B7%B1%E6%BC%82%E4%B8%A4%E5%B9%B4/</link>
+      <pubDate>Fri, 25 Feb 2022 23:59:08 +0000</pubDate>
+      
+      <guid>https://example.com/posts/%E6%88%91%E6%B7%B1%E6%BC%82%E4%B8%A4%E5%B9%B4/</guid>
+      <description>&lt;p&gt;漂了两年的一些碎碎念&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>正月十七</title>
+      <link>https://example.com/posts/%E6%AD%A3%E6%9C%88%E5%8D%81%E4%B8%83/</link>
+      <pubDate>Mon, 10 Feb 2020 17:42:29 +0000</pubDate>
+      
+      <guid>https://example.com/posts/%E6%AD%A3%E6%9C%88%E5%8D%81%E4%B8%83/</guid>
+      <description>&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

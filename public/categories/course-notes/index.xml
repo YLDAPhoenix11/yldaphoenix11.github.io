@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>course notes on Example Site</title>
+    <link>https://example.com/categories/course-notes/</link>
+    <description>Recent content in course notes on Example Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 22 Mar 2020 20:30:00 +0000</lastBuildDate><atom:link href="https://example.com/categories/course-notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RecSys Reading</title>
+      <link>https://example.com/posts/recsys_reading/</link>
+      <pubDate>Sun, 22 Mar 2020 20:30:00 +0000</pubDate>
+      
+      <guid>https://example.com/posts/recsys_reading/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Course note: Reading of Recommender systems&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Final Project</title>
+      <link>https://example.com/posts/final-project/</link>
+      <pubDate>Sun, 22 Mar 2020 15:23:00 +0000</pubDate>
+      
+      <guid>https://example.com/posts/final-project/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Course note of &lt;a class=&#34;link&#34; href=&#34;https://www.udacity.com/course/ab-testing--ud257&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;A/B testing on Udacity&lt;/a&gt;: Lesson 6&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Analyzing Results</title>
+      <link>https://example.com/posts/analyzing-results/</link>
+      <pubDate>Sun, 22 Mar 2020 15:20:00 +0000</pubDate>
+      
+      <guid>https://example.com/posts/analyzing-results/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Course note of &lt;a class=&#34;link&#34; href=&#34;https://www.udacity.com/course/ab-testing--ud257&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;A/B testing on Udacity&lt;/a&gt;: Lesson 5&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Design an Experiment</title>
+      <link>https://example.com/posts/design-an-experiment/</link>
+      <pubDate>Sun, 22 Mar 2020 15:18:00 +0000</pubDate>
+      
+      <guid>https://example.com/posts/design-an-experiment/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Course note of &lt;a class=&#34;link&#34; href=&#34;https://www.udacity.com/course/ab-testing--ud257&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;A/B testing on Udacity&lt;/a&gt;: Lesson 4&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Choosing and Characterizing metrics</title>
+      <link>https://example.com/posts/choosing-and-characterizing-metrics/</link>
+      <pubDate>Sun, 22 Mar 2020 14:48:02 +0000</pubDate>
+      
+      <guid>https://example.com/posts/choosing-and-characterizing-metrics/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Course note of &lt;a class=&#34;link&#34; href=&#34;https://www.udacity.com/course/ab-testing--ud257&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;A/B testing on Udacity&lt;/a&gt;: Lesson 3&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Policy and Ethics for Experiments</title>
+      <link>https://example.com/posts/policy-and-ethics-for-experiments/</link>
+      <pubDate>Sun, 22 Mar 2020 12:08:00 +0000</pubDate>
+      
+      <guid>https://example.com/posts/policy-and-ethics-for-experiments/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Course note of &lt;a class=&#34;link&#34; href=&#34;https://www.udacity.com/course/ab-testing--ud257&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;A/B testing on Udacity&lt;/a&gt;: Lesson 2&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Overview of A/B Testing</title>
+      <link>https://example.com/posts/overview-of-ab-testing/</link>
+      <pubDate>Thu, 19 Mar 2020 21:29:58 +0000</pubDate>
+      
+      <guid>https://example.com/posts/overview-of-ab-testing/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Course note of &lt;a class=&#34;link&#34; href=&#34;https://www.udacity.com/course/ab-testing--ud257&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;A/B testing on Udacity&lt;/a&gt;: Lesson 1&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Sentiment Analysis</title>
+      <link>https://example.com/posts/sentiment-analysis/</link>
+      <pubDate>Tue, 01 Oct 2019 16:03:58 +0000</pubDate>
+      
+      <guid>https://example.com/posts/sentiment-analysis/</guid>
+      <description>&lt;p&gt;Taking some notes after I watched &lt;a class=&#34;link&#34; href=&#34;http://web.stanford.edu/~jurafsky/NLPCourseraSlides.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Stanford Coursera course&lt;/a&gt; &amp;ldquo;Sentiment Analysis&amp;rdquo; by &lt;a class=&#34;link&#34; href=&#34;http://www.stanford.edu/people/jurafsky&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Dan Jurafsky&lt;/a&gt; and &lt;a class=&#34;link&#34; href=&#34;http://nlp.stanford.edu/manning/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Christopher Manning&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>RecSys Intro</title>
+      <link>https://example.com/posts/recsys_intro/</link>
+      <pubDate>Wed, 17 Apr 2019 18:01:32 +0000</pubDate>
+      
+      <guid>https://example.com/posts/recsys_intro/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Course note: overview of Recommender systems&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

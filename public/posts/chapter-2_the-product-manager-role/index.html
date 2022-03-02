@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='This article is the reading notes of chapter2 of &amp;ldquo;cracking the PM interview&amp;rdquo;.
+'><title>Chapter 2 The Product Manager Role</title>
+
+<link rel='canonical' href='https://example.com/posts/chapter-2_the-product-manager-role/'>
+
+<link rel="stylesheet" href="/scss/style.min.1b167e2cb0123f4ab756c1f7b38280839833cb553987f96fa7aaeacb7f4f71de.css"><meta property='og:title' content='Chapter 2 The Product Manager Role'>
+<meta property='og:description' content='This article is the reading notes of chapter2 of &amp;ldquo;cracking the PM interview&amp;rdquo;.
+'>
+<meta property='og:url' content='https://example.com/posts/chapter-2_the-product-manager-role/'>
+<meta property='og:site_name' content='Example Site'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='reading notes' /><meta property='article:tag' content='product manager' /><meta property='article:tag' content='interview' /><meta property='article:published_time' content='2019-02-06T16:14:56&#43;00:00'/><meta property='article:modified_time' content='2019-02-06T16:14:56&#43;00:00'/>
+<meta name="twitter:title" content="Chapter 2 The Product Manager Role">
+<meta name="twitter:description" content="This article is the reading notes of chapter2 of &amp;ldquo;cracking the PM interview&amp;rdquo;.
+">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_huda2458f72ce188392d75c5d51cd8e24e_373_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <h1 class="site-name"><a href="/">Example Site</a></h1>
+        <h2 class="site-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2><ol class="social-menu">
+                
+                    <li>
+                        <a 
+                            href='https://github.com/CaiJimmy/hugo-theme-stack'
+                            target="_blank"
+                            title="GitHub"
+                        >
+                            
+                            
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a 
+                            href='https://twitter.com'
+                            target="_blank"
+                            title="Twitter"
+                        >
+                            
+                            
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                            
+                        </a>
+                    </li>
+                
+            </ol></header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' target="_blank">
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+                <li id="i18n-switch">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                        
+                            <option value="https://example.com/" selected>English</option>
+                        
+                            <option value="https://example.com/cn/" >中文</option>
+                        
+                    </select>
+                </li>
+            
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/reading-notes/" >
+                reading notes
+            </a>
+        
+            <a href="/categories/cracking-the-pm-interview/" >
+                cracking the PM interview
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/posts/chapter-2_the-product-manager-role/">Chapter 2 The Product Manager Role</a>
+    </h2>
+
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Feb 06, 2019</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    8 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>This article is the reading notes of chapter2 of &ldquo;cracking the PM interview&rdquo;.</p>
+<hr>
+<p>This chapter is about the PM: what is PM, their functions and difference with other roles.</p>
+<h1 id="what-is-a-pm">What is a PM?</h1>
+<blockquote>
+<p>Some people will say that the product manager (sometimes called the program manager or project manager) is like a mini-CEO of their product. That’s accurate in some ways, since a PM takes holistic responsibility for the product, from the little details to the big picture. The PM needs to set vision and strategy. The PM defines success and makes decisions. But in one of the most important ways, the description of product manager as CEO misses the boat: product managers don’t have direct authority over the people on their team. As a PM, you’ll need to learn to lead your team without authority, influencing them with your vision and research.</p>
+</blockquote>
+<p>lead without authority</p>
+<blockquote>
+<p>Product management is a highly collaborative role.</p>
+</blockquote>
+<h1 id="functions-of-a-pm">Functions of a PM</h1>
+<blockquote>
+<p>Some companies or teams split the product manager role across two people: the more business-focused person and the more engineering-focused person. When companies make this split, they call the engineering-focused person the technical program manager or technical product manager (TPM), and they call the business-focused person the product manager (PM).</p>
+</blockquote>
+<p>PM will engage in the product life cycle, that is, Research&amp;Planning,  Design, Implement&amp;Test, Release</p>
+<p>(Search book to find more about the functions in every procedure)</p>
+<h2 id="how-the-type-of-product-affects-the-pm-job">How the type of product affects the PM job</h2>
+<p>type of product will affects PM job, for example:</p>
+<ul>
+<li>
+<p>Shipped Software.</p>
+<p>Shipped software is unique because it’s hard to update after launching. With a web app, you can always release a new feature and quickly roll it back if there are issues. With shipped software, it’s important to get it right the first time. PMs who are good at project management and have good communication skills do well working on shipped software. Shipped software can also be great for people who want a good work/life balance, since there aren’t usually urgent issues that need to be fixed within hours.</p>
+</li>
+<li>
+<p>Online Software.</p>
+<p>In online software, being scrappy is very important. Product updates are relatively easy, so things tend to move quickly. Instead of waiting for the product to be perfect, teams will often launch something, see how it does, and launch again. Most online-software teams run A/B tests. <strong>Because companies in online software collect more data, it’s important that these PMs are skilled with data analysis and designing experiments.</strong> It’s also important to work well under pressure, as servers can fail at any time and PMs often have to make quick decisions.</p>
+</li>
+<li>
+<p>Consumer Products.</p>
+<p>Consumer products like social networks, photo sharing apps, and web search, the customers are regular everyday people, just like you, your grandmother, and the engineers. The good thing about working on consumer products is that everyone understands the target customer and use cases. Unfortunately, that’s also the bad thing. <strong>Engineers will often have a lot of product ideas and won&rsquo;t rely much on the PM to come up features and ideas.</strong> PMs can often act like shepherds and editors, guiding the product to a good endpoint, rather than being the person who makes all the decisions. <strong>Data-driven PMs</strong> can do very well working on consumer products because they’re able to make a strong case for their proposals, and they often can come up with features that will make a difference to the core metrics the company cares about.</p>
+</li>
+<li>
+<p>B2B Products.</p>
+<p>For these products, engineers realize that they’re not the target audience and tend to rely more on the product manager to understand the customer. Depending on the team, sometimes PMs on B2B products are responsible for thinking about how product decisions will affect revenue. <strong>PMs who like doing customer research and market analysis could enjoy working on B2B products</strong>. These are also the products where PMs tend to exert the most influence,</p>
+<p>Depending on the team, sometimes PMs on B2B products are responsible for thinking about how product decisions will affect revenue.</p>
+<p>PMs who like doing customer research and market analysis could enjoy working on B2B products. These are also the products where PMs tend to exert the most influence,</p>
+</li>
+<li>
+<p>Early Stage Products</p>
+<p>PMs who like excitement and are comfortable with doing things the quick and dirty way do well on early stage products.</p>
+</li>
+<li>
+<p>Mature Products</p>
+<p>As a PM on a mature product, it can be very important to make sure you don’t get stuck making small incremental improvements. Often, a mature product’s biggest competitor is the last version of that same product. PMs who want to work on products used by millions of people would enjoy working on mature products. Mature products are also a great place to learn from the people who were able to make the product succeed.</p>
+</li>
+</ul>
+<h1 id="top-myths-about-product-management">Top Myths about Product Management</h1>
+<h2 id="pm-are-project-managers">PM are Project Managers</h2>
+<p>Project managers are mostly concerned with timelines and coordination. While they might be responsible for gathering the project requirements, they don’t have much say in identifying and choosing the requirements.</p>
+<p>Product managers are responsible for identifying problems and opportunities, picking which ones to go after, and then making sure the team comes up with great solutions, either by thinking of the solution themselves or by working with the designers and engineers. This is why <strong>product sense</strong>—having the intuition to recognize the difference between a good product and a bad product—is so important.</p>
+<h2 id="pm-are-in-marketing">PM are in Marketing</h2>
+<p>Marketing folks focus on getting users into the product, while product managers define what happens once the user is in the product. For example, a marketing manager might come up with messaging and start a social media campaign, while a product manager comes up with new features and works with the engineers to launch them. While marketing people will talk to product managers about features that would help the messaging or branding, they don’t define the details of those features or work with the engineers to build them.</p>
+<h2 id="you-cannot-become-a-pm-right-out-of-colleague">You cannot become a PM right out of colleague.</h2>
+<h2 id="pm-just-write-specs">PM just write specs.</h2>
+<p>For PMs, just delivering a spec isn’t enough.</p>
+<p>PMs are responsible for seeing the entire project through to a successful completion. Writing a spec is a technique for communicating and moving the project along, but the spec doesn’t have intrinsic value.</p>
+<h2 id="pm-just-set-up-meetings">PM just set up meetings.</h2>
+<h2 id="pm-should-build-exactly-what-the-customers-ask-for">PM should build exactly what the customers ask for.</h2>
+<p>It’s great to do customer research and listen to what customers ask for, but it’s not enough. <strong>Product managers look beyond what customers say to see the hidden needs and deeper goals.</strong></p>
+<h2 id="pm-set-the-dates">PM set the dates.</h2>
+<p>As Nundu, a PM at Google, says, “PMs don’t set dates. Engineers set dates.” As a PM, <strong>you can tell your team what you want them to build, but then they’ll tell you how long it will take to build it</strong>. If the timeline is too long, you can’t just tell them to code faster; it won’t work.</p>
+<p>Instead, if you have external deadlines you want to hit, you need to make tradeoffs and negotiate. You either need to cut features or find a way to parallelize the work and bring on more people to help out. Sometimes you can be even more clever and find ways to reduce the rest of your engineers’ workloads, such as getting them out of unnecessary meetings or having them temporarily spend less time interviewing candidates.</p>
+<h2 id="pms-are-the-boss">PMs are the boss.</h2>
+<p>In reality, product managers have no direct authority over the team. The team is never obligated to do what the PM says.</p>
+<p>Instead, PMs influence without authority, building up credibility with the team, communicating clearly, gathering data and research, and being persuasive to lead the team.</p>
+<p><strong>lead without authority</strong></p>
+<h2 id="ideas-are-more-important-than-execution">Ideas are more important than execution.</h2>
+<p>In practice, execution of an idea is much more important.</p>
+<p>details are usually the hard part.</p>
+<h2 id="you-can-say-thats-not-my-job">You can say &ldquo;That&rsquo;s not my job.&rdquo;</h2>
+<p>When you’re a product manager, your job is anything that isn’t being covered by other people.</p>
+<p>If there’s work that no one wants to do, you need to find a way to get it done, even if that means doing it yourself.</p>
+<h1 id="project-managers-and-program-managers">Project Managers and Program Managers</h1>
+<p>Program managers (except for Microsoft program managers) are similar but are usually in charge of a long-running program instead of a series of projects with set end dates.</p>
+<p>Software companies often have project managers leading teams that are internal-facing, like infrastructure projects and operations programs, or leading consulting teams that are focused on a single customer. This is in contrast to product managers, who usually lead teams building customer-facing products. However, this isn’t a hard and fast rule.</p>
+<h2 id="the-job-of-a-project-manager">The job of a Project Manager</h2>
+<p>The Job of a Project Manager Two things are unique about these roles. First, the project manager has a very clear and specific customer or goal. Project managers need to be comfortable reporting on the team’s progress. Being detail oriented and closely involved with the team are important so that you can answer questions from the customer and explain when things go wrong.</p>
+<p>The second unique part of project and program management is that budgeting and resource management are a big part of the job. Project managers often work in cost centers, so they focus a lot on operational efficiency and reducing costs while keeping quality up to par, unlike product managers who are often shielded from those aspects.</p>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/reading-notes/">reading notes</a>
+        
+            <a href="/tags/product-manager/">product manager</a>
+        
+            <a href="/tags/interview/">interview</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">Related contents</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="">
+    <a href="/posts/chapter-7-resumes/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Chapter 7 Resumes</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (DISQUS) {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2022 Example Site
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.8.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#how-the-type-of-product-affects-the-pm-job">How the type of product affects the PM job</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#pm-are-project-managers">PM are Project Managers</a></li>
+    <li><a href="#pm-are-in-marketing">PM are in Marketing</a></li>
+    <li><a href="#you-cannot-become-a-pm-right-out-of-colleague">You cannot become a PM right out of colleague.</a></li>
+    <li><a href="#pm-just-write-specs">PM just write specs.</a></li>
+    <li><a href="#pm-just-set-up-meetings">PM just set up meetings.</a></li>
+    <li><a href="#pm-should-build-exactly-what-the-customers-ask-for">PM should build exactly what the customers ask for.</a></li>
+    <li><a href="#pm-set-the-dates">PM set the dates.</a></li>
+    <li><a href="#pms-are-the-boss">PMs are the boss.</a></li>
+    <li><a href="#ideas-are-more-important-than-execution">Ideas are more important than execution.</a></li>
+    <li><a href="#you-can-say-thats-not-my-job">You can say &ldquo;That&rsquo;s not my job.&rdquo;</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#the-job-of-a-project-manager">The job of a Project Manager</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

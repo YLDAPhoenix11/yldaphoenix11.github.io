@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Course note of A/B testing on Udacity: Lesson 3
+'><title>Choosing and Characterizing metrics</title>
+
+<link rel='canonical' href='https://example.com/posts/choosing-and-characterizing-metrics/'>
+
+<link rel="stylesheet" href="/scss/style.min.1b167e2cb0123f4ab756c1f7b38280839833cb553987f96fa7aaeacb7f4f71de.css"><meta property='og:title' content='Choosing and Characterizing metrics'>
+<meta property='og:description' content='Course note of A/B testing on Udacity: Lesson 3
+'>
+<meta property='og:url' content='https://example.com/posts/choosing-and-characterizing-metrics/'>
+<meta property='og:site_name' content='Example Site'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='course notes' /><meta property='article:tag' content='data analytics' /><meta property='article:tag' content='A/B testing' /><meta property='article:published_time' content='2020-03-22T14:48:02&#43;00:00'/><meta property='article:modified_time' content='2020-03-22T14:48:02&#43;00:00'/>
+<meta name="twitter:title" content="Choosing and Characterizing metrics">
+<meta name="twitter:description" content="Course note of A/B testing on Udacity: Lesson 3
+">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_huda2458f72ce188392d75c5d51cd8e24e_373_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <h1 class="site-name"><a href="/">Example Site</a></h1>
+        <h2 class="site-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2><ol class="social-menu">
+                
+                    <li>
+                        <a 
+                            href='https://github.com/CaiJimmy/hugo-theme-stack'
+                            target="_blank"
+                            title="GitHub"
+                        >
+                            
+                            
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a 
+                            href='https://twitter.com'
+                            target="_blank"
+                            title="Twitter"
+                        >
+                            
+                            
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                            
+                        </a>
+                    </li>
+                
+            </ol></header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' target="_blank">
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+                <li id="i18n-switch">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                        
+                            <option value="https://example.com/" selected>English</option>
+                        
+                            <option value="https://example.com/cn/" >中文</option>
+                        
+                    </select>
+                </li>
+            
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/course-notes/" >
+                course notes
+            </a>
+        
+            <a href="/categories/data-analytics/" >
+                data analytics
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/posts/choosing-and-characterizing-metrics/">Choosing and Characterizing metrics</a>
+    </h2>
+
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 22, 2020</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    8 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <p><em>Course note of <a class="link" href="https://www.udacity.com/course/ab-testing--ud257"  target="_blank" rel="noopener"
+    >A/B testing on Udacity</a>: Lesson 3</em></p>
+<hr>
+<h1 id="choosing-and-characterizing-metrics">Choosing and Characterizing metrics</h1>
+<ul>
+<li>
+<p>Two types of metrics and their use cases:</p>
+<ul>
+<li>invariant checking/sanity checking metrics: metrics should not change across the experiment and the control. For example, the number of users in two groups in experiment and do they have the same distribution, like country, age, etc. For sanity checking may use multiple metrics</li>
+<li>evaludation metrics: high-level business metrics+detail metrics. For evaluation metrics #metrics depends company. For multiple metrics, can create a composed metric - an objective function, or OEC (overall evaluation criteria) to combine metrics.</li>
+</ul>
+</li>
+<li>
+<p>Steps:</p>
+<ol>
+<li>
+<p>High-level business metrics:</p>
+<p>metrics that everyone will understand, such as active users, click-through-probability</p>
+</li>
+<li>
+<p>Figure out details:</p>
+<p>how do you define &ldquo;active&rdquo;?</p>
+</li>
+<li>
+<p>summarize them into a single metric:</p>
+<p>like sum, median, etc</p>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="define">Define</h2>
+<p><strong>Brainstorm and establish metrics, from high-level to practical.</strong></p>
+<h3 id="refining-the-customer-funnel">Refining the customer funnel</h3>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1ga9ea9zqr1j31f40rndyz.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>**Search &ldquo;Adacity&rdquo; may not be a good answer since not search is just one type of acquisition; **</p>
+<p><strong>key idea: 1. break apart the original stage &amp; insert before or after original stages 2. follow the business objective.</strong> Since there is helping students get jobs in business objective, it is important to add get jobs in the final stage of tunnel.</p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1ga9dwkoebbj31c00u0u0x.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1ga9ehq61njj31c00u01ky.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>Users may not use coaching; Users may also switch between homepage and course list. But it is still a funnel.</p>
+<p>Each stage is a metric. Use more rates or probabilty than count since they are better at evaluation, such as the users switching between homepage and course list. It is better to use the convertion rate from homepage visits to course list visits.</p>
+<h3 id="choose-metrics">Choose metrics</h3>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1ga9dwiwbfnj31c00u0b2a.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1ga9dwy66lzj31c00u0npe.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>我的答案是3； 1，2； 5</p>
+<ul>
+<li>Update a description on the course list page: aimed at increase the conversion rate from course list to specific course; can also use <strong>continued progression down funnel</strong> as supplement, that is CTR to the course list page, or a drop-off rate of courses (may increase if descriptions are misleding).</li>
+<li>Increase size of &ldquo;start now&rdquo; button: can also use probability. But it is better to use rates since <strong>Rates are usually better for measuring the usability of a button</strong>. (If it is hard to find or hard to click, users may click multiple times, and CTR will decrease?)</li>
+<li>Explain benefits of paid service: can also use user retention (How long do users continue paying for coach) or usage metrics (among the users using coaching, do they use more).</li>
+</ul>
+<p>###Difficult metrics</p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1ga9dwpbpndj31c00u0x6p.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>我的答案：2，3.</p>
+<p>Rate of returning for 2nd course is also difficult because it will take too long to meature the metric (it will take a long time for users to return for 2nd course).</p>
+<p>Note that difficult metrics are metrics **take too long **and <strong>do not have data</strong>.</p>
+<h4 id="techniques-for-solving-difficult-metrics">Techniques for solving difficult metrics</h4>
+<ol>
+<li>
+<p>external data</p>
+<p>(1) companys that collect data, like NIelsen;</p>
+<p>(2) companys run surveys of users;</p>
+<p>(3) academic research, like eye tracking.</p>
+<p>Use for</p>
+<p>(1)brainstorming (think of new metrics),</p>
+<p>(2) validation metrics, develop validation techiniques.</p>
+</li>
+<li>
+<p>use our own data:</p>
+<p>(1) use all our existing data:</p>
+<ul>
+<li>
+<p>retrospective analysis/observational analysis, can combined with surveys&amp;focus groups&amp;etc, shows correlation not causation ;</p>
+</li>
+<li>
+<p>running experiement: run an experiment to validate whether or not we can use a metrics for evaluating experiements, measure that metric is actually going to move as we make changes: for example, use time that student takes to complete the quiz as metrics to measure students' undertanding of the material, we need to try <em>different quizs/on different formulation</em>, and test which one move the proposed metric</p>
+</li>
+</ul>
+<p>(2) gather new data: user experience research, survey, focus groups, etc</p>
+<p>more robust to combine these methods.</p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gaboqpzo1uj31c00u0x6p.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p><strong>Pdf on website</strong></p>
+<p>UER: can use special equipment, like eye tracking; need to validate results, such as retrospective analysis to see how  it varies over time or experiments to see how it varies when make changes</p>
+<p>Surveys: users do not need to tell truth</p>
+</li>
+</ol>
+<ul>
+<li>
+<p><strong>Example of applying other techniques</strong>:</p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gabor8bqbjj31c00u04qq.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gaborn2c77j31c00u0kjl.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<ul>
+<li>Rate of returning for 2nd course: if can find some metrics predictable, can use it as proxy in experiments, like the proxies in 3rd metrics.</li>
+<li>Probability of finding information via search: Can use proxies, and validate them with External data; Human evaludation is pay human raters to evaluate the site.</li>
+</ul>
+</li>
+<li>
+<p>Quiz</p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gabos5rmhij31ga0u0b29.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>我的答案：4， 6； 1，6 ；2， 5</p>
+<ul>
+<li>
+<p>measure user engagement: use UER and observed how engaged users are; retrospective analysis of users who have completed the courses and see what they have in common.</p>
+</li>
+<li>
+<p>Decide whether to excend inventory in shopping site: add new proeducts will be an expensive investment; user focus groups to get ideas from users about what they want</p>
+</li>
+<li>
+<p>which ads get most views: do retrospective analysis: assume that click is correlated with view, or see the lowest position where anyone has clicked and assume that they have viewed all before</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="build-intuition">Build Intuition</h2>
+<p><strong>Build intuition and understand sensitivity and robustness.</strong></p>
+<p>Turning a high-level metric into a well-defined metric:</p>
+<ul>
+<li>
+<p>fully define exactly what data are going to look at to define the metrics: numerator/denominator/filter/ways to compute a metric</p>
+<p>Many nuances, for example, in CTR, use cookie or just click?  a user view in 11:55pm and click on 12:01am, is he/she users in first day or last day? Or a user view the page but click 2 hours later, do we count it as once?</p>
+<p>Consider the technology, JS ping back is different in IE and Safiri, so also need to work with engineering team to <strong>understand nuances and get accurate data</strong>.</p>
+</li>
+<li>
+<p>summarize metric</p>
+</li>
+</ul>
+<h3 id="example-of-define-a-metric">Example of Define a metric</h3>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gaboswrajyj31c00u0kjl.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>When using different time interval, get different value.</p>
+<p>In this example, user click, then reload  but do not click (5 minutes later). After 30 seconds, click. After 12 hours, reload but not click.</p>
+<p>If per minute, orange rectangles show the groups; first and second groups have click, last one does not.</p>
+<p>If per hour, purple lines show the groups; first has click, last one does not.</p>
+<p>If per day, all events belongs to one group. CTR = 1</p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gaboub05kxj31c00u0npd.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>Definition2 (use page views instead of cookie) is easier to implement than definition1. To implement definition2, give each pageview a unique id. If user refresh page, it will generate a new page view but the cookie will remains same. So the CTR will be different.</p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gabovjy851j31c00u0b29.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gabowl9f50j31kc0tex1r.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>Double click: cookie and page view prob will count as single click.</p>
+<p>Back button caches page: It will generate a new page view. cookie prob will count 1 page view while the other two will count 2 page views.</p>
+<p>Click-tracking bug: If two clicks are recorded instead of one, similar with double-click. If click is missing, all will be influenced.</p>
+<h3 id="filtering-and-segmenting">Filtering and Segmenting</h3>
+<ul>
+<li>
+<p>Filter: filter the traffic, aimed at <strong>de-bias data or dull-bias data</strong></p>
+<p>external reasons: spam, fraud, etc;</p>
+<p>internal reasons: test what if if only change on subset of traffic and increase the power and sensitivity of experiment. For example, only test on English traffic.</p>
+<p><strong>Do not introduce bias when filtering</strong>. For example, filter long session which may because of the website, or filter on user id where there are users without accounts. To test whether it introduce bias, slice the data (by country, etc) and complete metrics on all of these slices,  or look at week over week or day over day data. <strong>Most important: Build intuition and know what changes are expected and what are not.</strong></p>
+</li>
+</ul>
+<h4 id="examples">Examples:</h4>
+<ul>
+<li>
+<p>week over week/ year over year</p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gabp02j4q3j31fx0u0kjl.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>week over week: # in Mon of this week/# in Mon of last week (here the spike shows that it is not due to week variation)</p>
+<p>year over year: # in day of this year/# in day of last year (the weekday may not correspond in two years, so if there is weekend effect, it will not be smooth)</p>
+</li>
+<li>
+<p>slice data:</p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gabp0bik0fj31c00u0x6p.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+</li>
+<li>
+<p>Quiz:<img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gabp0z8ymwj31c00u0hdu.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>By platform: mobile or web</p>
+<p>我的答案：3，4，6</p>
+<p>CTR and CTP over time cannot tell whether there is a problem alone.</p>
+<p>Both rate and probability on same graph: In general, rates are higher than probability. <strong>So it is expected that rates are higher than probabilities. And it is hard to know how much higher would the rates be.</strong></p>
+<p>CTR by platforms: Users' behavior may be different on different platform.  It is hard to tell whether it is because of JS bug or just user behavior.</p>
+</li>
+</ul>
+<h3 id="summary-metrics">Summary Metrics</h3>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gatu29qpsaj31c00u01ky.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h4 id="sensititvity-and-robustness">sensititvity and robustness</h4>
+<ul>
+<li>
+<p>Mean: sensitive; median: robust</p>
+</li>
+<li>
+<p>how to measure sensitivity and robustness?</p>
+<ol>
+<li>
+<p>running experiements or using experiments already have: whether the metrics respond to the changes</p>
+<p>use a vs. a experiment to determine whether metrics are too sensitive: do not change anything</p>
+</li>
+<li>
+<p>retrospective analysis</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Example of retrospective analysis:</p>
+<p>plot histogram: (<strong>The distributions are similar so these videos are comparable</strong>)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gavwn64wepj31jx0u07wh.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>compare different metrics: (<strong>Must make sure these 5 videos are comparable</strong>)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gavwnehnqwj31mv0u04qp.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>90th and 99th percentile changes among different videos</p>
+</li>
+<li>
+<p>Example of experiment:</p>
+<p>Histogram:</p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gavwnu915vj31k10u07wh.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>Video 1 have the highest resolution and highest load time.</p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbgr5as2nqj31lx0u07wh.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>Median and 80th percentile do not change among different videos.</p>
+</li>
+</ul>
+<h2 id="characterize">Characterize</h2>
+<p><strong>How to characterize the varaibility of the metrics.</strong></p>
+<h3 id="variability">variability</h3>
+<ul>
+<li>Absolute difference vs. relative difference</li>
+</ul>
+<h4 id="calculating-variability">calculating variability</h4>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gatwcprdj5j31c00u0hdt.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<ul>
+<li>
+<p>Quiz: calculating variablity analytically (with distribution)</p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gavwtq7povj31fp0sah7c.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+</li>
+<li>
+<p>calculating  variability empirically:</p>
+<ul>
+<li>
+<p>calculate with non-parametric: <a class="link" href="[https://baike.baidu.com/item/%E7%AC%A6%E5%8F%B7%E6%A3%80%E9%AA%8C]%28https://baike.baidu.com/item/%e7%ac%a6%e5%8f%b7%e6%a3%80%e9%aa%8c%29" >sign test</a></p>
+</li>
+<li>
+<p>A vs A experiment: run many a/a experiment with large enough samples, or run a big a/a experiment and <strong>bootstrap</strong></p>
+<p>in reality: analytical (with simple metrics) → bootstrap (when metrics become complicated) → are they consistent? (if not, many a/a experiments)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Examples:</p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gavyfmn48vj31wc0rv7wh.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<ol>
+<li>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gaw4f70l4jj31dw0qttes.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>May plot the results of different experiments and  compare them with assumption distribution.</p>
+</li>
+<li>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gaw4ax5rkqj31qo0u0b29.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>need to make an assumption of metrics, for example, metrics are normally distribution</p>
+<p>how to calculate SD (calculate the SD of difference between groups):<img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gaw4e6nj0hj31920u0e81.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+</li>
+<li>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gaw4jqxlgbj31c00u0npd.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>discard 2.5% of values of each side, then the range of the remaining data will give 95% confidence interval.</p>
+<p>lower bound and higher bound of the range is just the confidence interval, <strong>do not need to add average</strong>.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Quiz:</p>
+<p>Data:</p>
+<p><a class="link" href="https://docs.google.com/spreadsheets/d/1IFtnCTjMw023ixJIm7QvqAQ1M5peQnchyegYs1iVfyw/edit#gid=0"  target="_blank" rel="noopener"
+    >https://docs.google.com/spreadsheets/d/1IFtnCTjMw023ixJIm7QvqAQ1M5peQnchyegYs1iVfyw/edit#gid=0</a></p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gaw65cngu9j31p40u04qp.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+</li>
+</ul>
+<h2 id="summary">Summary</h2>
+<ul>
+<li>use a lot of time validating metrics</li>
+<li>define metrics; consider a lot of things</li>
+<li>Sensitivity and robustness</li>
+<li>Variability: always start with a basic analytical estimated variability</li>
+<li>Necassary: sanity checking</li>
+<li>how these metrics perform in practice: anything not taken into consideration and influence the metrics; peoples' behaviors may shift through time or after some change</li>
+</ul>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/course-notes/">course notes</a>
+        
+            <a href="/tags/data-analytics/">data analytics</a>
+        
+            <a href="/tags/a/b-testing/">A/B testing</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">Related contents</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="">
+    <a href="/posts/final-project/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Final Project</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/posts/analyzing-results/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Analyzing Results</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/posts/design-an-experiment/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Design an Experiment</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/posts/policy-and-ethics-for-experiments/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Policy and Ethics for Experiments</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/posts/overview-of-ab-testing/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Overview of A/B Testing</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (DISQUS) {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2022 Example Site
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.8.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#define">Define</a>
+      <ol>
+        <li><a href="#refining-the-customer-funnel">Refining the customer funnel</a></li>
+        <li><a href="#choose-metrics">Choose metrics</a>
+          <ol>
+            <li><a href="#techniques-for-solving-difficult-metrics">Techniques for solving difficult metrics</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#build-intuition">Build Intuition</a>
+      <ol>
+        <li><a href="#example-of-define-a-metric">Example of Define a metric</a></li>
+        <li><a href="#filtering-and-segmenting">Filtering and Segmenting</a>
+          <ol>
+            <li><a href="#examples">Examples:</a></li>
+          </ol>
+        </li>
+        <li><a href="#summary-metrics">Summary Metrics</a>
+          <ol>
+            <li><a href="#sensititvity-and-robustness">sensititvity and robustness</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#characterize">Characterize</a>
+      <ol>
+        <li><a href="#variability">variability</a>
+          <ol>
+            <li><a href="#calculating-variability">calculating variability</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#summary">Summary</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
