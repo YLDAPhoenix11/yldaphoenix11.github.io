@@ -1,128 +1,192 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Course note of A/B testing on Udacity: Lesson 6
+'><title>Final Project</title>
+
+<link rel='canonical' href='http://cyfz11.com/posts/final-project/'>
+
+<link rel="stylesheet" href="/scss/style.min.1b167e2cb0123f4ab756c1f7b38280839833cb553987f96fa7aaeacb7f4f71de.css"><meta property='og:title' content='Final Project'>
+<meta property='og:description' content='Course note of A/B testing on Udacity: Lesson 6
+'>
+<meta property='og:url' content='http://cyfz11.com/posts/final-project/'>
+<meta property='og:site_name' content='Nothingness'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='course notes' /><meta property='article:tag' content='data analytics' /><meta property='article:tag' content='A/B testing' /><meta property='article:published_time' content='2020-03-22T15:23:00&#43;00:00'/><meta property='article:modified_time' content='2020-03-22T15:23:00&#43;00:00'/>
+<meta name="twitter:title" content="Final Project">
+<meta name="twitter:description" content="Course note of A/B testing on Udacity: Lesson 6
+">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_huda2458f72ce188392d75c5d51cd8e24e_373_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <h1 class="site-name"><a href="/">Nothingness</a></h1>
+        <h2 class="site-description"></h2></header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
     
-    <title>Final Project | Nothingness</title>
-    <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="Course note of A/B testing on Udacity: Lesson 6">
-    <meta name="generator" content="Hugo 0.92.2" />
-    
-    
-    
-    
-      <meta name="robots" content="noindex, nofollow">
-    
-
-    
-<link rel="stylesheet" href="/ananke/css/main.min.css" >
-
-
-
-    
-    
-    
-      
-
-    
-
-    
-    
-    <meta property="og:title" content="Final Project" />
-<meta property="og:description" content="Course note of A/B testing on Udacity: Lesson 6" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://cyfz11.com/posts/final-project/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2020-03-22T15:23:00+00:00" />
-<meta property="article:modified_time" content="2020-03-22T15:23:00+00:00" />
-
-<meta itemprop="name" content="Final Project">
-<meta itemprop="description" content="Course note of A/B testing on Udacity: Lesson 6"><meta itemprop="datePublished" content="2020-03-22T15:23:00+00:00" />
-<meta itemprop="dateModified" content="2020-03-22T15:23:00+00:00" />
-<meta itemprop="wordCount" content="3405">
-<meta itemprop="keywords" content="course notes,data analytics,A/B testing," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Final Project"/>
-<meta name="twitter:description" content="Course note of A/B testing on Udacity: Lesson 6"/>
-
-	
-  </head>
-
-  <body class="ma0 avenir bg-near-white">
-
-    
-   
-  
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
-      
-        Nothingness
-      
-    </a>
-    <div class="flex-l items-center">
-      
-
-      
-      
-<div class="ananke-socials">
-  
-</div>
-    </div>
-  </div>
-</nav>
-
-    </div>
-  </header>
-
-
-
-    <main class="pb7" role="main">
-      
-  
-  <article class="flex-l flex-wrap justify-between mw8 center ph3">
-    <header class="mt4 w-100">
-      <aside class="instapaper_ignoref b helvetica tracked">
-          
-        POSTS
-      </aside>
-      
-
-
-
-
-
-
-
-
-
-
-  <div id="sharing" class="mt3 ananke-socials">
-    
-  </div>
-
-
-      <h1 class="f1 athelas mt3 mb1">Final Project</h1>
-      
-      
-      
-      <time class="f6 mv4 dib tracked" datetime="2020-03-22T15:23:00Z">March 22, 2020</time>
-      
-
-      
-      
+    <header class="article-category">
+        
+            <a href="/categories/course-notes/" >
+                course notes
+            </a>
+        
+            <a href="/categories/data-analytics/" >
+                data analytics
+            </a>
+        
     </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p><em>Course note of <a href="https://www.udacity.com/course/ab-testing--ud257">A/B testing on Udacity</a>: Lesson 6</em></p>
+    
+
+    <h2 class="article-title">
+        <a href="/posts/final-project/">Final Project</a>
+    </h2>
+
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 22, 2020</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    16 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <p><em>Course note of <a class="link" href="https://www.udacity.com/course/ab-testing--ud257"  target="_blank" rel="noopener"
+    >A/B testing on Udacity</a>: Lesson 6</em></p>
 <hr>
 <h1 id="final-project">Final Project</h1>
 <h2 id="0-instruction">0. Instruction</h2>
-<p>Instruction: <a href="https://docs.google.com/document/u/1/d/1aCquhIqsUApgsxQ8-SQBAigFDcfWVVohLEXcV6jWbdI/pub?embedded=True">https://docs.google.com/document/u/1/d/1aCquhIqsUApgsxQ8-SQBAigFDcfWVVohLEXcV6jWbdI/pub?embedded=True</a></p>
+<p>Instruction: <a class="link" href="https://docs.google.com/document/u/1/d/1aCquhIqsUApgsxQ8-SQBAigFDcfWVVohLEXcV6jWbdI/pub?embedded=True"  target="_blank" rel="noopener"
+    >https://docs.google.com/document/u/1/d/1aCquhIqsUApgsxQ8-SQBAigFDcfWVVohLEXcV6jWbdI/pub?embedded=True</a></p>
 <h3 id="experiment-overview-free-trial-screener">Experiment Overview: Free Trial Screener</h3>
 <p>At the time of this experiment, Udacity courses currently have two options on the course overview page: &ldquo;start free trial&rdquo;, and &ldquo;access course materials&rdquo;. If the student clicks &ldquo;start free trial&rdquo;, they will be asked to enter their credit card information, and then they will be enrolled in a free trial for the paid version of the course. After 14 days, they will automatically be charged unless they cancel first. If the student clicks &ldquo;access course materials&rdquo;, they will be able to view the videos and take the quizzes for free, but they will not receive coaching support or a verified certificate, and they will not submit their final project for feedback.</p>
-<p>In the experiment, Udacity tested a change where if the student clicked &ldquo;start free trial&rdquo;, they were asked how much time they had available to devote to the course. If the student indicated 5 or more hours per week, they would be taken through the checkout process as usual. If they indicated fewer than 5 hours per week, a message would appear indicating that Udacity courses usually require a greater time commitment for successful completion, and suggesting that the student might like to access the course materials for free. At this point, the student would have the option to continue enrolling in the free trial, or access the course materials for free instead. <a href="https://www.google.com/url?q=https://drive.google.com/a/knowlabs.com/file/d/0ByAfiG8HpNUMakVrS0s4cGN2TjQ/view?usp%3Dsharing&amp;sa=D&amp;ust=1580895798643000">This screenshot</a> shows what the experiment looks like.</p>
-<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbmspyrf9zj30wp0ixwkd.jpg" alt=""></p>
+<p>In the experiment, Udacity tested a change where if the student clicked &ldquo;start free trial&rdquo;, they were asked how much time they had available to devote to the course. If the student indicated 5 or more hours per week, they would be taken through the checkout process as usual. If they indicated fewer than 5 hours per week, a message would appear indicating that Udacity courses usually require a greater time commitment for successful completion, and suggesting that the student might like to access the course materials for free. At this point, the student would have the option to continue enrolling in the free trial, or access the course materials for free instead. <a class="link" href="https://www.google.com/url?q=https://drive.google.com/a/knowlabs.com/file/d/0ByAfiG8HpNUMakVrS0s4cGN2TjQ/view?usp%3Dsharing&amp;sa=D&amp;ust=1580895798643000"  target="_blank" rel="noopener"
+    >This screenshot</a> shows what the experiment looks like.</p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1gbmspyrf9zj30wp0ixwkd.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
 <p>The hypothesis was that this might set clearer expectations for students upfront, thus reducing the number of frustrated students who left the free trial because they didn&rsquo;t have enough time—without significantly reducing the number of students to continue past the free trial and eventually complete the course. If this hypothesis held true, Udacity could improve the overall student experience and improve coaches' capacity to support students who are likely to complete the course.</p>
 <p>The unit of diversion is a cookie, although if the student enrolls in the free trial, they are tracked by user-id from that point forward. The same user-id cannot enroll in the free trial twice. For users that do not enroll, their user-id is not tracked in the experiment, even if they were signed in when they visited the course overview page.</p>
 <h2 id="1-experiment-design">1. Experiment Design</h2>
@@ -142,7 +206,14 @@
 <ol>
 <li><!-- raw HTML omitted -->Firstly, draw the funnel to get the better understanding<!-- raw HTML omitted --></li>
 </ol>
-<p><img src="https://tva1.sinaimg.cn/large/0082zybpgy1gbnzbxi7etj30k00b9wf0.jpg" alt=""></p>
+<p><img src="https://tva1.sinaimg.cn/large/0082zybpgy1gbnzbxi7etj30k00b9wf0.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
 <ol start="2">
 <li>
 <p><!-- raw HTML omitted -->Choose invariant metrics<!-- raw HTML omitted --></p>
@@ -180,8 +251,16 @@
 </li>
 </ol>
 <h3 id="12-measuring-variability">1.2 Measuring Variability</h3>
-<p><a href="https://www.google.com/url?q=https://docs.google.com/a/knowlabs.com/spreadsheets/d/1MYNUtC47Pg8hdoCjOXaHqF-thheGpUshrFA21BAJnNc/edit%23gid%3D0&amp;sa=D&amp;ust=1580895798646000">This spreadsheet</a> contains rough estimates of the baseline values for these metrics (again, these numbers have been changed from Udacity&rsquo;s true numbers).</p>
-<p><img src="https://tva1.sinaimg.cn/large/0082zybpgy1gbnzbuj64dj30my087q6k.jpg" alt=""></p>
+<p><a class="link" href="https://www.google.com/url?q=https://docs.google.com/a/knowlabs.com/spreadsheets/d/1MYNUtC47Pg8hdoCjOXaHqF-thheGpUshrFA21BAJnNc/edit%23gid%3D0&amp;sa=D&amp;ust=1580895798646000"  target="_blank" rel="noopener"
+    >This spreadsheet</a> contains rough estimates of the baseline values for these metrics (again, these numbers have been changed from Udacity&rsquo;s true numbers).</p>
+<p><img src="https://tva1.sinaimg.cn/large/0082zybpgy1gbnzbuj64dj30my087q6k.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
 <p>**List the standard deviation of each of your evaluation metrics. **For each metric you selected as an evaluation metric, estimate its standard deviation analytically, given a sample size of 5000 cookies visiting the course view page. Do you expect the analytic estimates to be accurate? That is, for which metrics, if any, would you want to collect an empirical estimate of the variability if you had time? (These should be the answers from the &ldquo;Calculating standard deviation&rdquo; quiz.)</p>
 <ol start="4">
 <li>
@@ -251,8 +330,16 @@
 </li>
 </ol>
 <h2 id="2-experiment-analysis">2. Experiment Analysis</h2>
-<p>The data for you to analyze is <a href="https://www.google.com/url?q=https://docs.google.com/a/knowlabs.com/spreadsheets/d/1Mu5u9GrybDdska-ljPXyBjTpdZIUev_6i7t4LRDfXM8/edit%23gid%3D0&amp;sa=D&amp;ust=1580895798648000">here</a>. This data contains the raw information needed to compute the above metrics, broken down day by day. Note that there are two sheets within the spreadsheet - one for the experiment group, and one for the control group.</p>
-<p><img src="https://tva1.sinaimg.cn/large/0082zybpgy1gbnzbs3rf6j30qr0cu44f.jpg" alt=""></p>
+<p>The data for you to analyze is <a class="link" href="https://www.google.com/url?q=https://docs.google.com/a/knowlabs.com/spreadsheets/d/1Mu5u9GrybDdska-ljPXyBjTpdZIUev_6i7t4LRDfXM8/edit%23gid%3D0&amp;sa=D&amp;ust=1580895798648000"  target="_blank" rel="noopener"
+    >here</a>. This data contains the raw information needed to compute the above metrics, broken down day by day. Note that there are two sheets within the spreadsheet - one for the experiment group, and one for the control group.</p>
+<p><img src="https://tva1.sinaimg.cn/large/0082zybpgy1gbnzbs3rf6j30qr0cu44f.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
 <p>The meaning of each column is:</p>
 <ul>
 <li><strong>Pageviews:</strong> Number of unique cookies to view the course overview page that day.</li>
@@ -367,7 +454,8 @@
 <ol start="12">
 <li>
 <p><!-- raw HTML omitted -->Calculate the sign tests<!-- raw HTML omitted --></p>
-<p>onlinne calculator: <a href="https://www.graphpad.com/quickcalcs/binomial1/">https://www.graphpad.com/quickcalcs/binomial1/</a>, p = 0.5</p>
+<p>onlinne calculator: <a class="link" href="https://www.graphpad.com/quickcalcs/binomial1/"  target="_blank" rel="noopener"
+    >https://www.graphpad.com/quickcalcs/binomial1/</a>, p = 0.5</p>
 <p>For gross connversion: 23 trials, 4 success (For daily gross conversion, exp&gt;con 4 times), p-value = 0.0026, statistical significant</p>
 <p>For net conversion: 23 trials, 10 success  (For daily net convzersion, exp&gt;con 10 times), p-value =0.6776, not statistical significant</p>
 </li>
@@ -391,84 +479,223 @@
 </li>
 </ol>
 <p>Reference:</p>
-<p><a href="https://github.com/shubhamlal11/Udacity-AB-Testing-Final-Project">https://github.com/shubhamlal11/Udacity-AB-Testing-Final-Project</a></p>
-<p><a href="https://github.com/winkelman/udacity-dand-ab-test">https://github.com/winkelman/udacity-dand-ab-test</a></p><ul class="pa0">
-  
-   <li class="list di">
-     <a href="/tags/course-notes" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">course notes</a>
-   </li>
-  
-   <li class="list di">
-     <a href="/tags/data-analytics" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">data analytics</a>
-   </li>
-  
-   <li class="list di">
-     <a href="/tags/a/b-testing" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">A/B testing</a>
-   </li>
-  
-</ul>
-<div class="mt6 instapaper_ignoref">
-      
-      
-      </div>
-    </div>
-
-    <aside class="w-30-l mt6-l">
+<p><a class="link" href="https://github.com/shubhamlal11/Udacity-AB-Testing-Final-Project"  target="_blank" rel="noopener"
+    >https://github.com/shubhamlal11/Udacity-AB-Testing-Final-Project</a></p>
+<p><a class="link" href="https://github.com/winkelman/udacity-dand-ab-test"  target="_blank" rel="noopener"
+    >https://github.com/winkelman/udacity-dand-ab-test</a></p>
+</section>
 
 
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/course-notes/">course notes</a>
+        
+            <a href="/tags/data-analytics/">data analytics</a>
+        
+            <a href="/tags/a/b-testing/">A/B testing</a>
+        
+    </section>
 
 
-  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
-    <p class="f5 b mb3">Related</p>
-    <ul class="pa0 list">
-	   
-	     <li  class="mb2">
-          <a href="/posts/analyzing-results/">Analyzing Results</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/posts/design-an-experiment/">Design an Experiment</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/posts/choosing-and-characterizing-metrics/">Choosing and Characterizing metrics</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/posts/policy-and-ethics-for-experiments/">Policy and Ethics for Experiments</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/posts/overview-of-ab-testing/">Overview of A/B Testing</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/posts/sentiment-analysis/">Sentiment Analysis</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/posts/recsys_intro/">RecSys Intro</a>
-        </li>
-	    
-    </ul>
-</div>
+    </footer>
 
+
+    
+</article>
+
+    
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">Related contents</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="">
+    <a href="/posts/analyzing-results/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Analyzing Results</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/posts/design-an-experiment/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Design an Experiment</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/posts/choosing-and-characterizing-metrics/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Choosing and Characterizing metrics</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/posts/policy-and-ethics-for-experiments/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Policy and Ethics for Experiments</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/posts/overview-of-ab-testing/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Overview of A/B Testing</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
 </aside>
 
-  </article>
+     
+    
+        
+    
 
-    </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://cyfz11.com/" >
-    &copy;  Nothingness 2022 
-  </a>
-    <div>
-<div class="ananke-socials">
-  
-</div></div>
-  </div>
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2022 Nothingness
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.8.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
 </footer>
 
-  </body>
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
 </html>
